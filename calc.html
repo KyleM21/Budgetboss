@@ -7,6 +7,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
 
 	<!-- This is the script for budget computations -->
 	<script type = "text/javascript" src="js/calc.js"></script>
@@ -58,7 +60,7 @@
 		<p>Calculate your budget here!</p>
     <p> Please enter in the correct values below <p>
 
-<form name="cForm" onsubmit="budget()">	  
+<form name="cForm" onsubmit="budget()">
 	<label for="name">Name:</label>
 	<input type="text" id="name" name="name" placeholder="Enter your Name"><br><br>
 	<label for="income">Income:</label>
@@ -77,14 +79,14 @@
 	<input type="text" id="misc" name="misc" value="0"><br><br>
 
 	<input type="submit" value="Submit">
-	
+
 	<br>
 	<br>
 	<br>
-	
+
 	<label for="Total">Total Expenses:</label>
 	<input type="text" id="total" name="Expenses" value="" disabled="disabled"><br><br>
-	
+
 </form>
 		<hr>
 		<h3>Instructions</h3>

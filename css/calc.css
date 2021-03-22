@@ -77,3 +77,7 @@ footer {
   }
   .row.content {height:auto;}
 }
+*/
+.error{
+  color: red;
+}
