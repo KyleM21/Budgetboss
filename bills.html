@@ -50,24 +50,50 @@
     </div>
     <div class="col-sm-8 text-left">
 		<h1>Bill Analysis</h1>
-		<p>Find out here if a bill is too much, or if you're saving money</p>
+		<p>Find out here if a bill is too much, and get tips on how to lower it.</p>
 		<hr>
 		<h3>Please enter in your current bills</h3>
 		<p>Who knows what will go here O_O<p>
 
-      <form name="cForm" onsubmit="bill()">
+
+
+	<!--
+		Form: Kerry and Kyle
+		
+		This will be the form where the user will enter the bill and select the type of bill it is.
+		It will respond back to the user and tell them how their bill matches up with information well
+		will gather.  
+	-->
+	<form name="cForm" onsubmit="bill()">
       	<label for="name">Name:</label>
       	<input type="text" id="name" name="name" placeholder="Enter your Name"><br><br>
-      	<label for="bills">Bills:</label>
+      	<label for="bills">Bill:</label>
       	<input type="text" id="bills" name="bills" value="0"><br><br>
-        <label for="sub">Subscriptions:</label>
-
-  <select name="sub" id="sub">
-    <option value="Netflix">Netflix</option>
-    <option value="Hulu">Hulu</option>
-    <option value="Spotify">Apple Music</option>
-    <option value="audi">Spotify</option>
-  </select>
+		
+        <label for="sub">Bill type:</label>
+		<select name="Bill Type" id="btype">
+			<option value="electric">Electrical</option>
+			<option value="water">Water</option>
+			<option value="car">Car Payment</option>
+			<option value="food">Food</option>
+			<option value="house">mortage</option>
+			<option value="debt">Credit Cards</option>
+			<option value="school">Tuition</option>
+			<option value="subs">Subscriptions</option>
+		</select>
+		
+		
+		<br><br>
+		<input type="submit" value="Submit">
+		<br><br><hr>		
+		
+        <label for="sublist">Subscriptions:</label>
+		<select name="sub" id="sub">
+			<option value="Netflix">Netflix</option>
+			<option value="Hulu">Hulu</option>
+			<option value="Spotify">Apple Music</option>
+			<option value="audi">Spotify</option>
+		</select>
 
 
       	<input type="submit" value="Submit">
@@ -76,10 +102,7 @@
       	<br>
       	<br>
 
-      	<label for="Total">Total Expenses:</label>
-      	<input type="text" id="total" name="Expenses" value="" disabled="disabled"><br><br>
-
-      </form>
+	</form>
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">

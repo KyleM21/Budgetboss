@@ -136,3 +136,7 @@ function budget() {
 	}
 	
 }
+
+function bill() {
+	
+}

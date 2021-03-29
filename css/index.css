@@ -69,6 +69,11 @@ footer {
   padding: 15px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 /* On small screens, set height to 'auto' for sidenav and grid*
 @media screen and (max-width: 767px) {
   .sidenav {
