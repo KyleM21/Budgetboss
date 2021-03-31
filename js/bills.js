@@ -4,7 +4,6 @@ Bills.js page
 
 //function done by Kerry O'Neill
 function bill() {
-	alert("called")
 	var arr = $('form[name="cForm"]').serializeArray();
 
 	//input variables for name and bill
@@ -21,7 +20,6 @@ function bill() {
 
 
 	
-	alert(result)
 	// Kerry - I got rid of the if, in favor of a switch
 	//nested if statement for electric bill
 	/*
