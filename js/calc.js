@@ -134,9 +134,5 @@ function budget() {
 		alert(name + ", your bills are greater then your current income, I STRONGLY advise you to use the Bill Analysis Tool"
 					+ " to see if any of your bills could be lowered");
 	}
-	
-}
 
-function bill() {
-	
 }

@@ -8,7 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="css/bills.css">
-
+  <script type = "text/javascript" src="js/bills.js"></script>
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 </head>
 <body>
@@ -59,34 +59,34 @@
 
 	<!--
 		Form: Kerry and Kyle
-		
+
 		This will be the form where the user will enter the bill and select the type of bill it is.
 		It will respond back to the user and tell them how their bill matches up with information well
-		will gather.  
+		will gather.
 	-->
 	<form name="cForm" onsubmit="bill()">
       	<label for="name">Name:</label>
       	<input type="text" id="name" name="name" placeholder="Enter your Name"><br><br>
       	<label for="bills">Bill:</label>
       	<input type="text" id="bills" name="bills" value="0"><br><br>
-		
+
         <label for="sub">Bill type:</label>
 		<select name="Bill Type" id="btype">
-			<option value="electric">Electrical</option>
-			<option value="water">Water</option>
-			<option value="car">Car Payment</option>
-			<option value="food">Food</option>
-			<option value="house">mortage</option>
-			<option value="debt">Credit Cards</option>
-			<option value="school">Tuition</option>
+			<option value="electric" id="elec">Electrical</option>
+			<option value="phone" id="phone">Phone</option>
+			<option value="car" id="car">Car Payment</option>
+			<option value="food" id="food">Food</option>
+			<option value="house" id="house">Mortgage</option>
+			<option value="debt" id="debt">Credit Cards</option>
+			<option value="school" id="school">Tuition</option>
 			<option value="subs">Subscriptions</option>
 		</select>
-		
-		
+
+
 		<br><br>
 		<input type="submit" value="Submit">
-		<br><br><hr>		
-		
+		<br><br><hr>
+
         <label for="sublist">Subscriptions:</label>
 		<select name="sub" id="sub">
 			<option value="Netflix">Netflix</option>
