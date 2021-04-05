@@ -2,6 +2,36 @@
 Bills.js page
 */
 
+$(document).ready(function () {//start of function
+  $("form").submit(function(v) {
+    v.preventDefault();//validation first
+    bill();//calls budget function done by Kyle
+  }).validate({
+    rules: {
+      "name": {
+        required: true,//it must be a number
+				char: true
+      },
+      "bill": {
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [0, 10000000]//range can only be from -50 to 50
+      },
+    },
+    messages: {
+      name: {
+        required: "Error. Please enter in your name.",//error message for required input
+				char: "Error. Please enter in a char"
+      },
+      bill: {
+        required: "Error. Please enter in your income. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 0 and 1,000,000.",//error message for range
+      }
+    },
+  });
+});
+
 //function for bill.cs
 function bill() {
 	var arr = $('form[name="cForm"]').serializeArray();
