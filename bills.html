@@ -8,10 +8,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <link rel="stylesheet" href="css/bills.css">
   <script type = "text/javascript" src="js/bills.js"></script>
   <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 </head>
+
 <body>
 
   <nav class="navbar navbar-default" role="navigation">
@@ -74,7 +76,7 @@
         <label for="sub">Bill type:</label>
 		<select name="Bill Type" id="btype">
 			<option value="electric" id="elec">Electrical</option>
-			<option value="phone" id="phone">Phone</option>
+			<option value="phone" id="phone">Internet</option>
 			<option value="car" id="car">Car Payment</option>
 			<option value="food" id="food">Food</option>
 			<option value="house" id="house">Mortgage</option>
@@ -103,6 +105,10 @@
       	<br>
       	<br>
       	<br>
+
+        <div class="chart-container">
+          <canvas id="myCanvas"></canvas>
+          </div>
 
 	</form>
     </div>

@@ -59,7 +59,7 @@ color: #00E0E0;
 .sidenav {
   padding-top: 20px;
   background-color: #f1f1f1;
-  height: 175%;
+  height: 260%;
 }
 
 /* Set black background color, white text and some padding */
@@ -76,6 +76,14 @@ img {
 
 .error{
   color: red;
+}
+
+.chart-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+    width: 1000px;
+    height:600px
 }
 /* On small screens, set height to 'auto' for sidenav and grid*
 @media screen and (max-width: 767px) {
