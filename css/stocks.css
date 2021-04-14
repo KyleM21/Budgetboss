@@ -59,7 +59,7 @@ color: #00E0E0;
 .sidenav {
   padding-top: 20px;
   background-color: #f1f1f1;
-  height: 175%;
+  height: 275%;
 }
 
 /* Set black background color, white text and some padding */
@@ -72,6 +72,14 @@ footer {
 img {
   width: 100%;
   height: auto;
+}
+
+.chart-container {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+    width: 1000px;
+    height:500px
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid*
