@@ -1,16 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Budget Boss</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>Budget Boss</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/stocks.css">
 
-  <link rel="stylesheet" href="css/stocks.css">
-
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+	
+	<!-- This is the script for stock computations -->
+	<script type = "text/javascript" src="js/stonks.js"></script>
+	
+	<!--
+	<script>
+		$("#stonkForm").submit(function(event){
+		   event.preventDefault()
+		})
+	</script>
+	-->
+	
   </head>
   <body>
 
@@ -51,46 +62,54 @@
     </div>
     <div class="col-sm-8 text-left">
 		<h1>Wanna learn some STONKS?</h1>
-		<p>Stonks only go up</p>
+		<p>"Stonks only go up" - Bad financial advice</p>
 		<hr>
 		<h3>Simulate stonks here</h3>
 		<p>Please enter the initial price of each stock here</p>
-		<form name="cForm" onsubmit="budget()">
+		
+		<form id="stonkForm" name="cForm" onsubmit="stonk(); return false;">
 			<label for="stock1">Stock 1 cost:</label>
 			<input type="text" id="one" name="stock 1" value="0">
-				<label for="g1">New value:</label>
-				<input type="text" id="one" name="stock 1" value="0"><br><br>
+			<label for="g1">New value:</label>
+			<input type="text" id="one" name="stock 1" value="0"><br><br>
+			
 			<label for="stock2">Stock 2 cost:</label>
 			<input type="text" id="two" name="stock 2" value="0">
-				<label for="g2">New value:</label>
-				<input type="text" id="one" name="stock 1" value="0"><br><br>
+			<label for="g2">New value:</label>
+			<input type="text" id="one" name="stock 1" value="0"><br><br>
+			
 			<label for="stock3">Stock 3 cost:</label>
 			<input type="text" id="three" name="stock 3" value="0">
-				<label for="g3">New value:</label>
-				<input type="text" id="one" name="stock 1" value="0">
+			<label for="g3">New value:</label>
+			<input type="text" id="one" name="stock 1" value="0">
+		
 			<br><br>
 			<input type="submit" value="Submit">
-			<br><br>
-			<label for="results">Results</label>
-			<br>
-			<p>CHART GO HERE?</p>
-			<br>
-			<label for="stock1r">Stock 1:</label>
-			<input type="text" id="r1" name="results1" value="0" disabled="disabled"><br><br>
-			<label for="stock2r">Stock 2:</label>
-			<input type="text" id="r2" name="results2" value="0" disabled="disabled"><br><br>
-			<label for="stock3r">Stock 3:</label>
-			<input type="text" id="r3" name="results3" value="0" disabled="disabled"><br><br>
-
-			<br>
-			<label for="Total">Total Invesment:</label>
-			<input type="text" id="total" name="Investment" value="" disabled="disabled"><br><br>
-			<br>			
-			<label for="Total">Profits: </label>
-			<input type="text" id="total" name="Investment" value="" disabled="disabled"><br><br>
-			<label for="Total">Note: The number displayed in profits takes out the cost of the initial investment</label>
-
 		</form>
+	
+	<br><br>
+	<label for="results">Results</label>
+	<br>
+	<p>CHART GO HERE?</p>
+	<br>
+	
+	<!--
+	<label for="stock1r">Stock 1:</label>
+	<input type="text" id="r1" name="results1" value="0" disabled="disabled"><br><br>
+	<label for="stock2r">Stock 2:</label>
+	<input type="text" id="r2" name="results2" value="0" disabled="disabled"><br><br>
+	<label for="stock3r">Stock 3:</label>
+	<input type="text" id="r3" name="results3" value="0" disabled="disabled"><br><br>
+	-->
+	
+	<br>
+	<label for="Total">Total Invesment:</label>
+	<input type="text" id="total" name="Investment" value="" disabled="disabled"><br><br>
+	<br>			
+	<label for="Total">Profits: </label>
+	<input type="text" id="profit" name="Investment" value="" disabled="disabled"><br><br>
+	<label for="Total">Note: The number displayed in profits takes out the cost of the initial investment</label>
+
 	<br><br>
     </div>
     <div class="col-sm-2 sidenav">
