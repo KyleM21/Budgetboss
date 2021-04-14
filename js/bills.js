@@ -53,7 +53,7 @@ function bill() {
   var avg_car = 563.00;
   var avg_food = 349.00;
   var avg_rent = 1696.00;
-  var avg_debt = 3913.00;
+  var avg_debt = 666.20;
   var avg_school = 229.02;
   var avg_netflix = 13.99;
   var avg_hulu = 11.99;
@@ -87,6 +87,30 @@ function bill() {
   var avg_food_CT = 289.75;
   var avg_food_RI = 284.50;
   var avg_food_VT = 319.58;
+
+  //avg rent/mortgage variables for NH, ME, CT, RI, VT
+  //https://www.businessinsider.com/personal-finance/average-mortgage-payment
+  var avg_rent_NH = 1917.00;
+  var avg_rent_ME = 1381.00;
+  var avg_rent_CT = 2096.00;
+  var avg_rent_RI = 1838.00;
+  var avg_rent_VT = 1594.00;
+
+  //avg student loan debt variables for NH, ME, CT, RI, VT
+  //https://www.studentloanplanner.com/average-student-loan-payment-by-state/
+  var avg_school_NH = 438.00;
+  var avg_school_ME = 373.00;
+  var avg_school_CT = 428.00;
+  var avg_school_RI = 418.00;
+  var avg_school_VT = 339.00;
+
+  //avg credit card variables for NH, ME, CT, RI, VT
+  //https://www.chamberofcommerce.org/credit-card-debt-by-state
+  var avg_debt_NH = 687.70;
+  var avg_debt_ME = 622.00;
+  var avg_debt_CT = 750.00;
+  var avg_debt_RI = 680.00;
+  var avg_debt_VT = 622.16;
 
   switch(result){
     case "electric":
@@ -578,40 +602,364 @@ function bill() {
     case "house":
     if(bill>avg_rent){
       alert(name + " your monthly rent or mortgage bill is greater than MA's average which is: $" + avg_rent + ".");
+
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_rent, avg_rent_NH, avg_rent_ME, avg_rent_CT, avg_rent_RI, avg_rent_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     else
     if(bill >= avg_rent && bill <= 1696.99){
       alert(name + " your monthly rent or mortgage bill is the exact average of MA. which is: $" + avg_rent + ".");
+
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_rent, avg_rent_NH, avg_rent_ME, avg_rent_CT, avg_rent_RI, avg_rent_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     else{
       alert(name + " your monthly rent or mortgage bill is below the average in MA which is: $" + avg_rent + ".");
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_rent, avg_rent_NH, avg_rent_ME, avg_rent_CT, avg_rent_RI, avg_rent_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     break;
 
     case "debt":
     if(bill>avg_debt){
       alert(name + " your monthly credit card bill is greater than MA's average which is: $" + avg_debt + ".");
+
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_debt, avg_debt_NH, avg_debt_ME, avg_debt_CT, avg_debt_RI, avg_debt_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     else
     if(bill >= avg_debt && bill <= 3913.99){
       alert(name + " your monthly credit card bill is the exact average of MA. which is: $" + avg_debt + ".");
+
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_debt, avg_debt_NH, avg_debt_ME, avg_debt_CT, avg_debt_RI, avg_debt_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     else{
       alert(name + " your monthly credit card bill is below the average in MA which is: $" + avg_debt + ".");
+
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_debt, avg_debt_NH, avg_debt_ME, avg_debt_CT, avg_debt_RI, avg_debt_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     break;
     case "school":
     if(bill>avg_school){
       alert(name + " your monthly student loan bill is greater than MA's average which is: $" + avg_school + ".");
+
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_school, avg_school_NH, avg_school_ME, avg_school_CT, avg_school_RI, avg_school_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     else
     if(bill >= avg_school && bill <= 229.99){
       alert(name + " your monthly student loan bill is the exact average of MA. which is: $" + avg_school + ".");
+
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_school, avg_school_NH, avg_school_ME, avg_school_CT, avg_school_RI, avg_school_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     else{
       alert(name + " your monthly student loan bill is below the average in MA which is: $" + avg_school + ".");
+
+      var ctx = document.getElementById('myCanvas').getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: ['Your average', 'MA Average', 'NH Average', 'ME Average', 'CT Average', 'RI Average', "VT Average"],
+          datasets: [{
+            label: 'Comparing your bill to averages',
+            data: [bill, avg_school, avg_school_NH, avg_school_ME, avg_school_CT, avg_school_RI, avg_school_VT],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
     }
     break;
+
     case "subs":
     switch(result_sub){
       case "Netflix":
