@@ -8,10 +8,12 @@ $(document).ready(function () {//start of function
     bill();//calls budget function done by Kyle
   }).validate({
     rules: {
+	/*
       "name": {
         required: true,//it must be a number
         char: true
       },
+	*/
       "bill": {
         required: true,//it must be a number
         number: true,//it must be a number
@@ -19,10 +21,12 @@ $(document).ready(function () {//start of function
       },
     },
     messages: {
+	/*
       name: {
         required: "Error. Please enter in your name.",//error message for required input
         char: "Error. Please enter in a char"
       },
+	*/
       bill: {
         required: "Error. Please enter in your income. Must be an integer.",//error message for required input
         number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
@@ -34,11 +38,33 @@ $(document).ready(function () {//start of function
 
 //function for bill.cs
 function bill() {
+	
+	// This first part just sets up the modal window that will show the results!
+	
+	// Get the modal
+	var modal = document.getElementById("message");
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close")[0];
+
+	// When the user clicks on <span> (x), close the modal
+	span.onclick = function() {
+	  modal.style.display = "none";
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	  if (event.target == modal) {
+		modal.style.display = "none";
+	  }
+	} 
+	
+	//Bill function
   var arr = $('form[name="cForm"]').serializeArray();
 
   //input variables for name and bill
-  var name = arr[0].value;
-  var bill = arr[1].value;
+  //var name = arr[0].value;
+  var bill = arr[0].value;
 
   //input variables for Bill type drop down
   var e = document.getElementById("btype");
@@ -115,7 +141,8 @@ function bill() {
   switch(result){
     case "electric":
     if(bill>avg_elec){
-      alert(name + " your monthly electric bill is greater than MA's average which is: $" + avg_elec + ".");
+		document.getElementById("mText").innerHTML = ("Your monthly electric bill is greater than MA's average which is: $" + avg_elec + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -155,7 +182,8 @@ function bill() {
     }
     else
     if(bill >= 176.00 && bill <= avg_elec){
-      alert(name + " your monthly electric bill is the exact average of MA. which is: $" + avg_elec + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly electric bill is the exact average of MA. which is: $" + avg_elec + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -195,7 +223,8 @@ function bill() {
 
     }
     else{
-      alert(name + " your monthly electric bill is below the average in MA which is: $" + avg_elec + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly electric bill is below the average in MA which is: $" + avg_elec + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -238,7 +267,8 @@ function bill() {
 
     case "phone":
     if(bill>avg_phone){
-      alert(name + " your monthly phone bill is greater than MA's average which is: $" + avg_phone + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly phone bill is greater than MA's average which is: $" + avg_phone + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -278,7 +308,8 @@ function bill() {
     }
     else
     if(bill >= avg_phone && bill <= 114.99){
-      alert(name + " your monthly phone bill is the exact average of MA. which is: $" + avg_phone + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly phone bill is the exact average of MA. which is: $" + avg_phone + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -317,7 +348,8 @@ function bill() {
       });
     }
     else{
-      alert(name + " your monthly phone bill is below the average in MA which is: $" + avg_phone + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly phone bill is below the average in MA which is: $" + avg_phone + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -359,7 +391,8 @@ function bill() {
 
     case "car":
     if(bill>avg_car){
-      alert(name + " your monthly car lease or finance bill is greater than MA's average which is: $" + avg_car + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly car lease or finance bill is greater than MA's average which is: $" + avg_car + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -399,7 +432,8 @@ function bill() {
     }
     else
     if(bill >= avg_car && bill <= 563.99){
-      alert(name + " your monthly car lease or finance bill is the exact average of MA. which is: $" + avg_car + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly car lease or finance bill is the exact average of MA. which is: $" + avg_car + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -438,7 +472,8 @@ function bill() {
       });
     }
     else{
-      alert(name + " your monthly car lease or finance bill is below the average in MA which is: $" + avg_car + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly car lease or finance bill is below the average in MA which is: $" + avg_car + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -480,7 +515,8 @@ function bill() {
 
     case "food":
     if(bill>avg_food){
-      alert(name + " your monthly food bill is greater than MA's average which is: $" + avg_food + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly food bill is greater than MA's average which is: $" + avg_food + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -520,7 +556,8 @@ function bill() {
     }
     else
     if(bill >= avg_food && bill <= 349.99){
-      alert(name + " your monthly food bill is the exact average of MA. which is: $" + avg_food + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly food bill is the exact average of MA. which is: $" + avg_food + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -559,7 +596,8 @@ function bill() {
       });
     }
     else{
-      alert(name + " your monthly food bill is below the average in MA which is: $" + avg_food + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly food bill is below the average in MA which is: $" + avg_food + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -601,7 +639,8 @@ function bill() {
 
     case "house":
     if(bill>avg_rent){
-      alert(name + " your monthly rent or mortgage bill is greater than MA's average which is: $" + avg_rent + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly rent or mortgage bill is greater than MA's average which is: $" + avg_rent + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -641,7 +680,8 @@ function bill() {
     }
     else
     if(bill >= avg_rent && bill <= 1696.99){
-      alert(name + " your monthly rent or mortgage bill is the exact average of MA. which is: $" + avg_rent + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly rent or mortgage bill is the exact average of MA. which is: $" + avg_rent + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -680,7 +720,9 @@ function bill() {
       });
     }
     else{
-      alert(name + " your monthly rent or mortgage bill is below the average in MA which is: $" + avg_rent + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly rent or mortgage bill is below the average in MA which is: $" + avg_rent + ".");
+		modal.style.display = "block";
+		
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'line',
@@ -721,7 +763,8 @@ function bill() {
 
     case "debt":
     if(bill>avg_debt){
-      alert(name + " your monthly credit card bill is greater than MA's average which is: $" + avg_debt + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly credit card bill is greater than MA's average which is: $" + avg_debt + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -761,7 +804,8 @@ function bill() {
     }
     else
     if(bill >= avg_debt && bill <= 3913.99){
-      alert(name + " your monthly credit card bill is the exact average of MA. which is: $" + avg_debt + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly credit card bill is the exact average of MA. which is: $" + avg_debt + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -800,7 +844,8 @@ function bill() {
       });
     }
     else{
-      alert(name + " your monthly credit card bill is below the average in MA which is: $" + avg_debt + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly credit card bill is below the average in MA which is: $" + avg_debt + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -841,7 +886,8 @@ function bill() {
     break;
     case "school":
     if(bill>avg_school){
-      alert(name + " your monthly student loan bill is greater than MA's average which is: $" + avg_school + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly student loan bill is greater than MA's average which is: $" + avg_school + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -881,7 +927,8 @@ function bill() {
     }
     else
     if(bill >= avg_school && bill <= 229.99){
-      alert(name + " your monthly student loan bill is the exact average of MA. which is: $" + avg_school + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly student loan bill is the exact average of MA. which is: $" + avg_school + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -920,7 +967,8 @@ function bill() {
       });
     }
     else{
-      alert(name + " your monthly student loan bill is below the average in MA which is: $" + avg_school + ".");
+      document.getElementById("mText").innerHTML = ("Your monthly student loan bill is below the average in MA which is: $" + avg_school + ".");
+		modal.style.display = "block";
 
       var ctx = document.getElementById('myCanvas').getContext('2d');
       var myChart = new Chart(ctx, {
@@ -964,53 +1012,65 @@ function bill() {
     switch(result_sub){
       case "Netflix":
       if(bill>avg_netflix){
-        alert(name + " your monthly Netflix bill is greater than MA's average which is: $" + avg_netflix + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Netflix bill is greater than MA's average which is: $" + avg_netflix + ".");
+		modal.style.display = "block";
       }
       else
       if(bill >= avg_netflix && bill <= 14){
-        alert(name + " your monthly Netflix bill is the exact average of MA. which is: $" + avg_netflix + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Netflix bill is the exact average of MA. which is: $" + avg_netflix + ".");
+		modal.style.display = "block";
       }
       else{
-        alert(name + " your monthly Netflix bill is below the average in MA which is: $" + avg_netflix + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Netflix bill is below the average in MA which is: $" + avg_netflix + ".");
+		modal.style.display = "block";
       }
       break;
 
       case "Hulu":
       if(bill>avg_hulu){
-        alert(name + " your monthly Hulu bill is greater than MA's average which is: $" + avg_hulu + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Hulu bill is greater than MA's average which is: $" + avg_hulu + ".");
+		modal.style.display = "block";
       }
       else
       if(bill >= avg_hulu && bill <= 12){
-        alert(name + " your monthly Hulu bill is the exact average of MA. which is: $" + avg_hulu + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Hulu bill is the exact average of MA. which is: $" + avg_hulu + ".");
+		modal.style.display = "block";
       }
       else{
-        alert(name + " your monthly Hulu bill is below the average in MA which is: $" + avg_hulu + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Hulu bill is below the average in MA which is: $" + avg_hulu + ".");
+		modal.style.display = "block";
       }
       break;
 
       case "Apple Music":
       if(bill>avg_apple){
-        alert(name + " your monthly Apple Music bill is greater than MA's average which is: $" + avg_apple + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Apple Music bill is greater than MA's average which is: $" + avg_apple + ".");
+		modal.style.display = "block";
       }
       else
       if(bill >= avg_apple && bill <= 10){
-        alert(name + " your monthly Apple Music bill is the exact average of MA. which is: $" + avg_apple + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Apple Music bill is the exact average of MA. which is: $" + avg_apple + ".");
+		modal.style.display = "block";
       }
       else{
-        alert(name + " your monthly Apple Music bill is below the average in MA which is: $" + avg_apple + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Apple Music bill is below the average in MA which is: $" + avg_apple + ".");
+		modal.style.display = "block";
       }
       break;
 
       case "Spotify":
       if(bill>avg_spotify){
-        alert(name + " your monthly Spotify bill is greater than MA's average which is: $" + avg_spotify + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Spotify bill is greater than MA's average which is: $" + avg_spotify + ".");
+		modal.style.display = "block";
       }
       else
       if(bill >= avg_netflix && bill <= 10){
-        alert(name + " your monthly Spotify bill is the exact average of MA. which is: $" + avg_spotify + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Spotify bill is the exact average of MA. which is: $" + avg_spotify + ".");
+		modal.style.display = "block";
       }
       else{
-        alert(name + " your monthly Spotify bill is below the average in MA which is: $" + avg_spotify + ".");
+        document.getElementById("mText").innerHTML = ("Your monthly Spotify bill is below the average in MA which is: $" + avg_spotify + ".");
+		modal.style.display = "block";
       }
       break;
     }

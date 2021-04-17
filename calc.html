@@ -56,13 +56,15 @@
       <p><a href="#">Links to helpful resources</a></p>
     </div>
     <div class="col-sm-8 text-left">
-		<h1>Budget Calculator</h1>
-		<p>Calculate your budget here!</p>
+	<h1>Budget Calculator</h1>
+	<p>Calculate your budget here!</p>
     <p> Please enter in the correct values below <p>
 
 <form name="cForm" onsubmit="budget(); return false;">
+	<!--
 	<label for="name">Name:</label>
 	<input type="text" id="name" name="name" placeholder="Enter your Name"><br><br>
+	-->
 	<label for="income">Income:</label>
 	<input type="text" id="inc" name="income" value="0"><br><br>
 	<label for="rent">Rent:</label>
@@ -88,10 +90,22 @@
 	<input type="text" id="total" name="Expenses" value="" disabled="disabled"><br><br>
 
 </form>
-		<hr>
-		<h3>Instructions</h3>
-		<p> Please put in your monthly income, and each of your USUAL monthly expenses.  Anything that does
-			not have a field can be put in the Miscellaneous field<p>
+
+<!-- The Modal -->
+<div id="message" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p id="mText"></p>
+  </div>
+
+</div>
+
+	<hr>
+	<h3>Instructions</h3>
+	<p> Please put in your monthly income, and each of your USUAL monthly expenses.  Anything that does
+		not have a field can be put in the Miscellaneous field<p>
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">

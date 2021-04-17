@@ -60,57 +60,74 @@
 
 
 
-	<!--
-		Form: Kerry and Kyle
+		<!--
+			Form: Kerry and Kyle
 
-		This will be the form where the user will enter the bill and select the type of bill it is.
-		It will respond back to the user and tell them how their bill matches up with information well
-		will gather.
-	-->
-	<form name="cForm" onsubmit="bill(); return false;">
-      	<label for="name">Name:</label>
-      	<input type="text" id="name" name="name" placeholder="Enter your Name"><br><br>
-      	<label for="bills">Bill:</label>
-      	<input type="text" id="bills" name="bills" value="0"><br><br>
+			This will be the form where the user will enter the bill and select the type of bill it is.
+			It will respond back to the user and tell them how their bill matches up with information well
+			will gather.
+		-->
+		<form name="cForm" onsubmit="bill(); return false;">
+		
+			<!--
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" placeholder="Enter your Name"><br><br>
+			-->
+			
+			<label for="bills">Bill:</label>
+			<input type="text" id="bills" name="bills" value="0"><br><br>
 
-        <label for="sub">Bill type:</label>
-		<select name="Bill Type" id="btype">
-			<option value="electric" id="elec">Electrical</option>
-			<option value="phone" id="phone">Internet</option>
-			<option value="car" id="car">Car Payment</option>
-			<option value="food" id="food">Food</option>
-			<option value="house" id="house">Mortgage</option>
-			<option value="debt" id="debt">Credit Cards</option>
-			<option value="school" id="school">Tuition</option>
-			<option value="subs">Subscriptions</option>
-		</select>
+			<label for="sub">Bill type:</label>
+			<select name="Bill Type" id="btype">
+				<option value="electric" id="elec">Electrical</option>
+				<option value="phone" id="phone">Internet</option>
+				<option value="car" id="car">Car Payment</option>
+				<option value="food" id="food">Food</option>
+				<option value="house" id="house">Mortgage</option>
+				<option value="debt" id="debt">Credit Cards</option>
+				<option value="school" id="school">Tuition</option>
+				<option value="subs">Subscriptions</option>
+			</select>
 
 
-		<br><br>
-		<input type="submit" value="Submit">
-	<br><br>
-<h4> Please select which subscription you want below. </h4>
-<br>
-        <label for="sublist">Subscriptions:</label>
-		<select name="sub" id="sub">
-			<option value="Netflix">Netflix</option>
-			<option value="Hulu">Hulu</option>
-			<option value="Spotify">Apple Music</option>
-			<option value="audi">Spotify</option>
-		</select>
-<br><br>
+			<br><br>
+			<input type="submit" value="Submit">
+			<br><br>
+			
+			<h4> Please select which subscription you want below. </h4>
+			<br>
+			
+			<label for="sublist">Subscriptions:</label>
+			<select name="sub" id="sub">
+				<option value="Netflix">Netflix</option>
+				<option value="Hulu">Hulu</option>
+				<option value="Spotify">Apple Music</option>
+				<option value="audi">Spotify</option>
+			</select>
+			<br><br>
 
-      	<input type="submit" value="Submit">
+			<input type="submit" value="Submit">
 
-      	<br>
-      	<br>
-      	<br>
+			<br>
+			<br>
+			<br>
 
-        <div class="chart-container">
-          <canvas id="myCanvas"></canvas>
-          </div>
+			<div class="chart-container">
+			  <canvas id="myCanvas"></canvas>
+			  </div>
+		</form>
+	
+		<!-- The Modal -->
+		<div id="message" class="modal">
 
-	</form>
+		  <!-- Modal content -->
+		  <div class="modal-content">
+			<span class="close">&times;</span>
+			<p id="mText"></p>
+		  </div>
+
+		</div>
+
     </div>
     <div class="col-sm-2 sidenav">
       <div class="well">
