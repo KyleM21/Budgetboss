@@ -179,3 +179,65 @@ function stonk(){
 function addCommas(x){
 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
+
+
+//Validation
+
+$(document).ready(function() {
+	$("stonkForm").submit(function(v) {
+		stonk();
+	}).validate({
+    rules: {
+		stockOne: {
+			pattern: [0-9,],
+			number: true
+		  },
+		newStockOne: {
+			pattern: [0-9,],
+			number: true
+		  },
+		stockTwo: {
+			pattern: [0-9,],
+			number: true
+		  },
+		newStockTwo: {
+			pattern: [0-9,],
+			number: true
+		  },
+		stockThree: {
+			pattern: [0-9,],
+			number: true
+		  },
+		newStockThree: {
+			pattern: [0-9,],
+			number: true
+		  }
+	},
+    messages : {
+		stockOne: {
+			pattern: "Please only numbers and commas",
+			number: "Please only enter numerical values"
+		},
+		newStockOne: {
+			pattern: "Please only numbers and commas",
+			number: "Please only enter numerical values"
+		},
+		stockTwo: {
+			pattern: "Please only numbers and commas",
+			number: "Please only enter numerical values"
+		},
+		newStockTwo: {
+			pattern: "Please only numbers and commas",
+			number: "Please only enter numerical values"
+		},
+		stockThree: {
+			pattern: "Please only numbers and commas",
+			number: "Please only enter numerical values"
+		},
+		newStockThree: {
+			pattern: "Please only numbers and commas",
+			number: "Please only enter numerical values"
+		}
+    }
+  });
+});

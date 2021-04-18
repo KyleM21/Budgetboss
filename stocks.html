@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<link rel="stylesheet" href="css/stocks.css">
@@ -70,19 +71,21 @@
 
 		<form id="stonkForm" name="cForm" onsubmit="stonk(); return false;">
 			<label for="stock1">Stock 1 cost:</label>
-			<input type="text" id="one" name="stock 1" onfocus="this.value=''" value="0">
+			<input type="text" id="sOne" name="stockOne" onfocus="this.value=''" value="0">
 			<label for="g1">New value:</label>
-			<input type="text" id="one" name="stock 1" onfocus="this.value=''" value="0"><br><br>
+			<input type="text" id="nOne" name="newStockOne" onfocus="this.value=''" value="0">
+			<br><br>
 
 			<label for="stock2">Stock 2 cost:</label>
-			<input type="text" id="two" name="stock 2" onfocus="this.value=''" value="0">
+			<input type="text" id="sTwo" name="stockTwo" onfocus="this.value=''" value="0">
 			<label for="g2">New value:</label>
-			<input type="text" id="one" name="stock 1" onfocus="this.value=''" value="0"><br><br>
+			<input type="text" id="nTwo" name="newStockTwo" onfocus="this.value=''" value="0">
+			<br><br>
 
 			<label for="stock3">Stock 3 cost:</label>
-			<input type="text" id="three" name="stock 3" onfocus="this.value=''" value="0">
+			<input type="text" id="sThree" name="stockThree" onfocus="this.value=''" value="0">
 			<label for="g3">New value:</label>
-			<input type="text" id="one" name="stock 1" onfocus="this.value=''" value="0">
+			<input type="text" id="nThree" name="newStockThree" onfocus="this.value=''" value="0">
 
 			<br><br>
 			<input type="submit" value="Submit">
