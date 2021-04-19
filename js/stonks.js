@@ -35,15 +35,19 @@ function stonk(){
 
 	var arr = $('form[name="cForm"]').serializeArray();
 
-	var x11 = parseFloat(arr[0].value);
-	var x12 = parseFloat(arr[1].value);
+	var quant1 = parseFloat(arr[1].value);
+	var x11 = parseFloat(arr[0].value) * quant1;
+	var x12 = parseFloat(arr[2].value) * quant1;
 
-	var x21 = parseFloat(arr[2].value);
-	var x22 = parseFloat(arr[3].value);
+	var quant2 = parseFloat(arr[4].value);
+	var x21 = parseFloat(arr[3].value) * quant2;
+	var x22 = parseFloat(arr[5].value) * quant2;
 
-	var x31 = parseFloat(arr[4].value);
-	var x32 = parseFloat(arr[5].value);
+	var quant3 = parseFloat(arr[7].value);
+	var x31 = parseFloat(arr[6].value) * quant3;
+	var x32 = parseFloat(arr[8].value) * quant3;
 
+	//var investment = (x11*quant1) + (x21*quant2) + (x31*quant3);
 	var investment = x11 + x21 + x31;
 	var worth = x12 + x22 + x32;
 	var profits = worth - investment;
@@ -184,9 +188,8 @@ function addCommas(x){
 //Validation
 
 $(document).ready(function() {
-	$("stonkForm").submit(function(v) {
-		stonk();
-	}).validate({
+	$("form[name='cForm']").validate({
+		
     rules: {
 		stockOne: {
 			pattern: [0-9,],
@@ -239,5 +242,6 @@ $(document).ready(function() {
 			number: "Please only enter numerical values"
 		}
     }
+	
   });
 });

@@ -139,6 +139,10 @@ img {
   cursor: pointer;
 }
 
+.verticalLine {
+  border-style: solid;
+}
+
 /*
 	After this is the code for the Modal window
 */
