@@ -33,11 +33,11 @@ function stonk(){
 
 		var ctx = document.getElementById('myCanvas').getContext('2d');
 		var myChart = new Chart(ctx, {
-			type: 'line',
+			type: 'bar',
 			data: {
 				labels: ['Stock 1 Cost', 'Stock 1 New Value', 'Stock 2 Cost', 'Stock 2 New Value', 'Stock 3 Cost', 'Stock 3 New Value', 'Total Investment', 'Worth', 'Profits'],
 				datasets: [{
-					label: 'Comparing your bill to averages',
+					label: 'Simulate your stocks here!',
 					data: [x11, x12, x21, x22, x31, x32, investment, worth, profits],
 					backgroundColor: [
 						'rgba(255, 99, 132, 0.2)',
@@ -72,11 +72,11 @@ function stonk(){
 
 		var ctx = document.getElementById('myCanvas').getContext('2d');
 		var myChart = new Chart(ctx, {
-			type: 'line',
+			type: 'bar',
 			data: {
 				labels: ['Stock 1 Cost', 'Stock 1 New Value', 'Stock 2 Cost', 'Stock 2 New Value', 'Stock 3 Cost', 'Stock 3 New Value', 'Total Investment', 'Worth', 'Profits'],
 				datasets: [{
-					label: 'Comparing your bill to averages',
+					label: 'Simulate your stocks here!',
 					data: [x11, x12, x21, x22, x31, x32, investment, worth, profits],
 					backgroundColor: [
 						'rgba(255, 99, 132, 0.2)',
@@ -112,11 +112,11 @@ function stonk(){
 
 								var ctx = document.getElementById('myCanvas').getContext('2d');
 								var myChart = new Chart(ctx, {
-									type: 'line',
+									type: 'bar',
 									data: {
 										labels: ['Stock 1 Cost', 'Stock 1 New Value', 'Stock 2 Cost', 'Stock 2 New Value', 'Stock 3 Cost', 'Stock 3 New Value', 'Total Investment', 'Worth', 'Profits'],
 										datasets: [{
-											label: 'Comparing your bill to averages',
+											label: 'Simulate your stocks here!',
 											data: [x11, x12, x21, x22, x31, x32, investment, worth, profits],
 											backgroundColor: [
 												'rgba(255, 99, 132, 0.2)',
