@@ -6,111 +6,83 @@
 	Revisions:
 
 */
-
-//Jquery validation done by Kerry
 $(document).ready(function () {//start of function
   $("form").submit(function(v) {
     v.preventDefault();//validation first
-    budget();//calls budget function done by Kyle
+    budget();//call table and input function
   }).validate({
     rules: {
-	/*
-      "name": {
-        required: true,//it must be a number
-				char: true
-      },
-	*/
       "income": {
-		pattern: [0-9,],
         required: true,//it must be a number
         number: true,//it must be a number
-        range: [0, 10000000]//range can only be from -50 to 50
+        range: [-100000, 100000]//range can only be from -100000 to 100000
       },
       "rent": {
-		pattern: [0-9,],
         required: true,//it must be a number
         number: true,//it must be a number
-        range: [0, 10000000]//range can only be from -50 to 50
+        range: [-100000, 100000]//range can only be from -100000 to 100000
       },
       "utilities": {
-		pattern: [0-9,],
         required: true,//it must be a number
         number: true,//it must be a number
-        range: [0, 10000000]//range can only be from -50 to 50
+        range: [-100000, 100000]//range can only be from -100000 to 100000
       },
-		"insurance": {
-		pattern: [0-9,],
+      "insurance": {
         required: true,//it must be a number
         number: true,//it must be a number
-        range: [0, 10000000]//range can only be from -50 to 50
+        range: [-100000, 100000]//range can only be from -100000 to 100000
       },
-		"food": {
-		pattern: [0-9,],
+      "food":{
         required: true,//it must be a number
         number: true,//it must be a number
-        range: [0, 10000000]//range can only be from -50 to 50
+        range: [-100000, 100000]//range can only be from -100000 to 100000
       },
-		"savings": {
-		pattern: [0-9,],
+      "savings":{
         required: true,//it must be a number
         number: true,//it must be a number
-        range: [0, 10000000]//range can only be from -50 to 50
+        range: [-100000, 100000]//range can only be from -100000 to 100000
       },
-		"misc": {
-		pattern: [0-9,],
+      "misc":{
         required: true,//it must be a number
         number: true,//it must be a number
-        range: [0, 10000000]//range can only be from -50 to 50
-      },
+        range: [-100000, 100000]//range can only be from -100000 to 100000
+      }
     },
     messages: {
-	/*
-      name: {
-        required: "Error. Please enter in your name.",//error message for required input
-				char: "Error. Please enter in a char"
-      },
-	*/
       income: {
-		pattern: "Error. Please only enter numbers and commas",
-        required: "Error. Please enter in your income. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 and 1,000,000.",//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between -100000 to 100000."//error message for range
       },
       rent: {
-		pattern: "Error. Please only enter numbers and commas",
-		required: "Error. Please enter in your rent. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 and 1,000,000.",//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between -100000 to 100000."//error message for range
       },
       utilities: {
-		pattern: "Error. Please only enter numbers and commas",
-		required: "Error. Please enter in your utilities amount. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 and 1,000,000.",//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between -100000 to 100000."//error message for range
       },
-		insurance: {
-		pattern: "Error. Please only enter numbers and commas",
-		required: "Error. Please enter in your insurance cost. Can be car insurance, health insurance, etc. Must be an integer.",//error message for required input
+      insurance: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
         number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 and 1,000,000.",//error message for range
+        range: "Error. Please enter an integer between -50 to 50."//error message for range
       },
-		food: {
-		pattern: "Error. Please only enter numbers and commas",
-		required: "Error. Please enter in your food cost. Must be an integer.",//error message for required input
+      food: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
         number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 and 1,000,000.",//error message for range
+        range: "Error. Please enter an integer between -50 to 50."//error message for range
       },
-		savings: {
-		pattern: "Error. Please only enter numbers and commas",
-		required: "Error. Please enter in how much you want to put in savings. Must be an integer.",//error message for required input
+      savings: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
         number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 and 1,000,000.",//error message for range
+        range: "Error. Please enter an integer between -50 to 50."//error message for range
       },
-		misc: {
-		pattern: "Error. Please only enter numbers and commas",
-		required: "Error. Please enter in your miscellaneous costs. Can be anything like subscriptions, going out, etc. Must be an integer.",//error message for required input
+      misc: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
         number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 and 1,000,000.",//error message for range
+        range: "Error. Please enter an integer between -50 to 50."//error message for range
       }
     },
   });
@@ -118,15 +90,15 @@ $(document).ready(function () {//start of function
 
 //budget function by Kyle Marcoux
 function budget() {
-		
+
 	// This first part just sets up the modal window that will show the results!
-	
+
 	// Get the modal
 	var modal = document.getElementById("message");
-	
+
 	// Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("close")[0];
-	
+
 	// When the user clicks on <span> (x), close the modal
 	span.onclick = function() {
 	  modal.style.display = "none";
@@ -137,11 +109,11 @@ function budget() {
 	  if (event.target == modal) {
 		modal.style.display = "none";
 	  }
-	} 
-	
+	}
+
 	// Grabs income and totals up expenses
 	var arr = $('form[name="cForm"]').serializeArray();
-	
+
 	// This loop will remove all commas found in the input fields
 	for(i=0; i<=6; i++){
 		arr[i].value = (arr[i].value).replace(',', '');
@@ -165,7 +137,7 @@ function budget() {
 	// Sets the total expenses to the total field
 	// It also uses a regex on the total expenses to add commas
 	document.getElementById("total").value = tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-	
+
 
 
 	// Runs a check to tell the user how the income they inputted matches up with their monthly expenses
@@ -185,4 +157,3 @@ function budget() {
 	}
 
 }
-

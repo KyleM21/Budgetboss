@@ -37,7 +37,7 @@
                   <span class="icon-bar"></span>
                   <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Budget Boss</a>
+              <p class="navbar-brand">Budget Boss</p>
           </div>
           <!-- menu -->
           <div class="collapse navbar-collapse navbar-center" id="Mynavbar">
@@ -68,42 +68,95 @@
 		<hr>
 		<h3>Simulate stonks here</h3>
 		<p>Please enter the initial price of each stock here</p>
-
+<hr>
 		<form id="cForm" name="cForm" onsubmit="stonk(); return false;">
+
 			<div class="row">
 				<div class="col-sm-4 text-left">
-					<label for="stock1">Stock 1 cost:</label>
-					<input type="text" id="sOne" name="stockOne" onfocus="this.value=''" value="0"><br>
-					<label for="quantity of stock 1">Quantity:</label>
-					<input type="text" id="quantity1" name="quantity1" onfocus="this.value=''" value="1"><br>
-					<label for="g1">New value:</label>
-					<input type="text" id="nOne" name="newStockOne" onfocus="this.value=''" value="0"><br>
+
+					<div class="form-group row">
+					<label for="stock1" class="col-sm-2 col-form-label">Stock 1 cost:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="sOne" name="stockOne" onfocus="this.value=''" value="0"><br>
+				</div>
+			</div>
+
+			<div class="form-group row">
+					<label for="quantity of stock 1" class="col-sm-2 col-form-label">Quantity:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="quantity1" name="quantity1" onfocus="this.value=''" value="1"><br>
+				</div>
+			</div>
+
+			<div class="form-group row">
+					<label for="g1" class="col-sm-2 col-form-label">New value:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="nOne" name="newStockOne" onfocus="this.value=''" value="0"><br>
+				</div>
+			</div>
+					<br><br>
+
+				</div>
+
+
+				<div class="col-sm-4 text-left">
+
+					<div class="form-group row">
+					<label for="stock2" class="col-sm-2 col-form-label">Stock 2 cost:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="sTwo" name="stockTwo" onfocus="this.value=''" value="0"><br>
+				</div>
+			</div>
+
+			<div class="form-group row">
+					<label for="quantity of stock 2" class="col-sm-2 col-form-label">Quantity:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="quantity2" name="quantity2" onfocus="this.value=''" value="1"><br>
+				</div>
+			</div>
+
+			<div class="form-group row">
+					<label for="g2" class="col-sm-2 col-form-label">New value:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="nTwo" name="newStockTwo" onfocus="this.value=''" value="0"><br>
+				</div>
+			</div>
 					<br><br>
 				</div>
-				
+
 				<div class="col-sm-4 text-left">
-					<label for="stock2">Stock 2 cost:</label>
-					<input type="text" id="sTwo" name="stockTwo" onfocus="this.value=''" value="0"><br>
-					<label for="quantity of stock 2">Quantity:</label>
-					<input type="text" id="quantity2" name="quantity2" onfocus="this.value=''" value="1"><br>
-					<label for="g2">New value:</label>
-					<input type="text" id="nTwo" name="newStockTwo" onfocus="this.value=''" value="0"><br>
-					<br><br>
+
+					<div class="form-group row">
+					<label for="stock3" class="col-sm-2 col-form-label">Stock 3 cost:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="sThree" name="stockThree" onfocus="this.value=''" value="0"><br>
 				</div>
-				
-				<div class="col-sm-4 text-left">
-					<label for="stock3">Stock 3 cost:</label>
-					<input type="text" id="sThree" name="stockThree" onfocus="this.value=''" value="0"><br>
-					<label for="quantity of stock 3">Quantity:</label>
-					<input type="text" id="quantity3" name="quantity3" onfocus="this.value=''" value="1"><br>
-					<label for="g3">New value:</label>
-					<input type="text" id="nThree" name="newStockThree" onfocus="this.value=''" value="0"><br>
+			</div>
+
+			<div class="form-group row">
+					<label for="quantity of stock 3" class="col-sm-2 col-form-label">Quantity:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="quantity3" name="quantity3" onfocus="this.value=''" value="1"><br>
+				</div>
+			</div>
+
+			<div class="form-group row">
+					<label for="g3" class="col-sm-2 col-form-label">New value:</label>
+					<div class="col-sm-6">
+					<input type="text" class="form-control" id="nThree" name="newStockThree" onfocus="this.value=''" value="0"><br>
+				</div>
+			</div>
 					<br><br>
 				</div>
 			</div>
-			<input type="submit" value="Submit">
+			<div class="form-group row">
+				<label for="blank" class="col-sm-5 col-form-label"> </label>
+				<div class="col-sm-6">
+					<button type="submit" class="btn btn-info">Submit</button>
+				</div>
+			</div>
 		</form>
-		
+
 		<!-- The Modal -->
 		<div id="message" class="modal">
 

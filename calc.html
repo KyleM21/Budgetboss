@@ -9,7 +9,10 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
-
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+	<script src="js/jquery.calc.js"></script>
 	<!-- This is the script for budget computations -->
 	<script type = "text/javascript" src="js/calc.js"></script>
 
@@ -17,110 +20,186 @@
 	<link rel="stylesheet" href="css/calc.css">
 
 	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
-	</head>
-	<body>
+</head>
+<body>
 
 	<nav class="navbar navbar-default" role="navigation">
-	  <div class="container-fluid">
-		  <!-- logo -->
-		  <div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Mynavbar">
-				  <span class="sr-only">Toggle navigation</span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-				  <span class="icon-bar"></span>
-			  </button>
-			  <a class="navbar-brand" href="#">Budget Boss</a>
-		  </div>
-		  <!-- menu -->
-		  <div class="collapse navbar-collapse navbar-center" id="Mynavbar">
-			  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li class="active"><a href="#">Budget Calculator</a></li>
-				  <li><a href="stocks.html">Stocks</a></li>
-				  <li><a href="bills.html">Bill Analysis</a></li>
+		<div class="container-fluid">
+			<!-- logo -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Mynavbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<p class="navbar-brand">Budget Boss</p>
+			</div>
+			<!-- menu -->
+			<div class="collapse navbar-collapse navbar-center" id="Mynavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li class="active"><a href="#">Budget Calculator</a></li>
+					<li><a href="stocks.html">Stocks</a></li>
+					<li><a href="bills.html">Bill Analysis</a></li>
 
-			  </ul>
-		  </div>
-	  </div>
+				</ul>
+			</div>
+		</div>
 	</nav>
 
-<div class="container-fluid text-center">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-	  <img src="img/logo.png" alt="Logo" >
-	  <p></p>
-	  <p></p>
-      <p><a href="#">Links to helpful extra resources?</a></p>
-      <p><a href="#">Links to sources for our project?</a></p>
-      <p><a href="#">Links to helpful resources</a></p>
-    </div>
-    <div class="col-sm-8 text-left">
-	<h1>Budget Calculator</h1>
-	<p>Calculate your budget here!</p>
-    <p> Please enter in the correct values below <p>
+	<div class="container-fluid text-center">
+		<div class="row content">
+			<div class="col-sm-2 sidenav">
+				<img src="img/logo.png" alt="Logo" >
+				<p></p>
+				<p></p>
+				<p><a href="#">Links to helpful extra resources?</a></p>
+				<p><a href="#">Links to sources for our project?</a></p>
+				<p><a href="#">Links to helpful resources</a></p>
+			</div>
+			<div class="col-sm-8 text-left">
+				<h1>Budget Calculator</h1>
+				<h3>Instructions</h3>
+				<hr>
+				<p> Please enter in your monthly expenses down below. Anything not inputted will be put in as a zero. </p>
+				<p> If you have any yearly expenses and are not sure of the monthly expenses, use the calculator on the side and divide by 12!</p>
 
-<form name="cForm" onsubmit="budget(); return false;">
-	<!--
-	<label for="name">Name:</label>
-	<input type="text" id="name" name="name" placeholder="Enter your Name"><br><br>
-	-->
-	<label for="income">Income:</label>
-	<input type="text" id="inc" name="income" onfocus="this.value=''" value="0"><br><br>
-	<label for="rent">Rent:</label>
-	<input type="text" id="rent" name="rent" onfocus="this.value=''" value="0"><br><br>
-	<label for="utilities">Utlities:</label>
-	<input type="text" id="util" name="utilities" onfocus="this.value=''" value="0"><br><br>
-	<label for="insurance">Insurance:</label>
-	<input type="text" id="insurance" name="insurance" onfocus="this.value=''" value="0"><br><br>
-	<label for="food">Food:</label>
-	<input type="text" id="food" name="food" onfocus="this.value=''" value="0"><br><br>
-	<label for="savings">Savings:</label>
-	<input type="text" id="savings" name="savings" onfocus="this.value=''" value="0"><br><br>
-	<label for="misc">Miscellaneous:</label>
-	<input type="text" id="misc" name="misc" onfocus="this.value=''" value="0"><br><br>
+				<hr>
+				<br>
 
-	<input type="submit" value="Submit">
+				<form name="cForm" onsubmit="budget(); return false;">
 
-	<br>
-	<br>
-	<br>
+					<div class="col-sm-7">
+						<div class="form-group row">
+							<label for="income" class="col-sm-2 col-form-label">Income</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="inc" name="income" onfocus="this.value=''" value="0"><br><br>
+							</div>
+						</div>
 
-	<label for="Total">Total Expenses:</label>
-	<input type="text" id="total" name="Expenses" value="" disabled="disabled"><br><br>
+						<div class="form-group row">
+							<label for="rent" class="col-sm-2 col-form-label">Rent</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="rent" name="rent" onfocus="this.value=''" value="0"><br><br>
+							</div>
+						</div>
 
-</form>
+						<div class="form-group row">
+							<label for="utilities" class="col-sm-2 col-form-label">Utlities</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="util" name="utilities" onfocus="this.value=''" value="0"><br><br>
 
-<!-- The Modal -->
-<div id="message" class="modal">
+							</div>
+						</div>
+						<div class="form-group row">
+							<label for="insurance" class="col-sm-2 col-form-label">Insurance</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="insurance" name="insurance" onfocus="this.value=''" value="0"><br><br>
+							</div>
+						</div>
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p id="mText"></p>
-  </div>
+						<div class="form-group row">
+							<label for="food" class="col-sm-2 col-form-label">Food</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="food" name="food" onfocus="this.value=''" value="0"><br><br>
+							</div>
+						</div>
 
-</div>
+						<div class="form-group row">
+							<label for="savings" class="col-sm-2 col-form-label">Savings</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="savings" name="savings" onfocus="this.value=''" value="0"><br><br>
+							</div>
+						</div>
 
-	<hr>
-	<h3>Instructions</h3>
-	<p> Please put in your monthly income, and each of your USUAL monthly expenses.  Anything that does
-		not have a field can be put in the Miscellaneous field<p>
-    </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>Ads by Google</p>
-      </div>
-      <div class="well">
-        <p>Ads by Google</p>
-      </div>
-    </div>
-  </div>
-</div>
+						<div class="form-group row">
+							<label for="misc" class="col-sm-2 col-form-label">Miscellaneous</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="misc" name="misc" onfocus="this.value=''" value="0"><br><br>
+							</div>
+						</div>
 
-<footer class="container-fluid text-center">
-  <p>Powered by Team Scuffed</p>
-</footer>
+						<div class="form-group row">
+							<label for="blank" class="col-sm-2 col-form-label"> </label>
+							<div class="col-sm-4">
+								<button type="submit" class="btn btn-info">Submit</button>
+							</div>
+						</div>
+
+						<hr>
+						<div class="form-group row">
+							<label for="Total" class="col-sm-2 col-form-label">Total Expenses</label>
+							<div class="col-sm-4">
+								<input type="text" class="form-control" id="total" name="Expenses" value="" disabled="disabled"><br><br>
+							</div>
+						</div>
+					</div>
+
+					<!-- https://www.jqueryscript.net/demo/Creating-A-Simple-Calculator-with-jQuery/ -->
+					<div class="col-sm-4">
+						<h2 style="text-align: center; font-size: 40px;"> Calculator </h2>
+						<div class="calculator">
+
+							<input type="text" readonly>
+							<div class="row">
+								<div class="key">1</div>
+								<div class="key">2</div>
+								<div class="key">3</div>
+								<div class="key last">0</div>
+							</div>
+							<div class="row">
+								<div class="key">4</div>
+								<div class="key">5</div>
+								<div class="key">6</div>
+								<div class="key last action instant">clear</div>
+							</div>
+							<div class="row">
+								<div class="key">7</div>
+								<div class="key">8</div>
+								<div class="key">9</div>
+								<div class="key last action instant">=</div>
+							</div>
+							<div class="row">
+								<div class="key action">+</div>
+								<div class="key action">-</div>
+								<div class="key action">x</div>
+								<div class="key last action">/</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-1">
+					</div>
+				</form>
+
+				<!-- The Modal -->
+				<div id="message" class="modal">
+
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p id="mText"></p>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="col-sm-2 sidenav">
+				<div class="well">
+					<p>Ads by Google</p>
+				</div>
+				<div class="well">
+					<p>Ads by Google</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer class="container-fluid text-center">
+		<p>Powered by Team Scuffed</p>
+	</footer>
 
 </body>
 </html>

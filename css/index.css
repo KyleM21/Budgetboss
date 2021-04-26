@@ -9,7 +9,7 @@
     padding: 15px;
     font-family: Arial, Helvetica, sans-serif;
     margin: auto;
-    
+
 }
 
 /*budget boss logo*/
@@ -73,6 +73,7 @@ img {
   width: 100%;
   height: auto;
 }
+
 
 /* On small screens, set height to 'auto' for sidenav and grid*
 @media screen and (max-width: 767px) {
