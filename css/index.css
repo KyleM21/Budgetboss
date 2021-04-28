@@ -74,6 +74,13 @@ img {
   height: auto;
 }
 
+.dark,
+.dark * {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
 
 /* On small screens, set height to 'auto' for sidenav and grid*
 @media screen and (max-width: 767px) {

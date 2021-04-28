@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Budget Boss</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <link rel="stylesheet" href="css/bills.css">
-  <script type = "text/javascript" src="js/bills.js"></script>
-  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+	<title>Budget Boss</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<link rel="stylesheet" href="css/bills.css">
+	<script type = "text/javascript" src="js/bills.js"></script>
+	<link rel="shortcut icon" type="image/png" href="img/favicon.png">
+  
+	<!-- Dark Mode Script -->
+	<script type = "text/javascript" src="js/dark.js"></script>
 </head>
 
 <body>
@@ -42,15 +45,12 @@
 
 <div class="container-fluid text-center">
   <div class="row content">
-
-    <div class="col-sm-2 sidenav">
-	  <img src="img/logo.png" alt="Logo">
-	  <p></p>
-	  <p></p>
-      <p><a href="#">Links to helpful extra resources?</a></p>
-      <p><a href="#">Links to sources for our project?</a></p>
-      <p><a href="#">Links to helpful resources</a></p>
-    </div>
+	<div class="col-sm-2 sidenav">
+		<img src="img/logo.png" alt="Logo" >
+		<br>
+		<br>
+		<button id="dToggle" type="darkbutton" class="btn btn-info">Lights out</button>
+	</div>
     <div class="col-sm-8 text-left">
 		<h1>Bill Analysis</h1>
 		<h3>Find out here if a bill is too much, and get tips on how to lower it.</h3>

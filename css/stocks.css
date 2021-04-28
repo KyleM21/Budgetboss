@@ -232,6 +232,14 @@ body {
 .tradingview-widget-container iframe:nth-of-type(2) {
   left: 100%;
 }
+
+.dark,
+.dark * {
+    background-color: #222;
+    color: #e6e6e6;
+    border-color: #e6e6e6;
+}
+
 /*
 .chart-container {
 

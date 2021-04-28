@@ -15,14 +15,17 @@
 
 	<!-- This is the script for stock computations -->
 	<script type = "text/javascript" src="js/stonks.js"></script>
+	
+	<!-- Dark Mode Script -->
+	<script type = "text/javascript" src="js/dark.js"></script>
 
 	<!--
 	<script>
-	$("#stonkForm").submit(function(event){
-	event.preventDefault()
-})
-</script>
--->
+		$("#stonkForm").submit(function(event){
+		event.preventDefault()
+		})
+	</script>
+	-->
 
 </head>
 <body>
@@ -56,11 +59,9 @@
 
 			<div class="col-sm-2 sidenav">
 				<img src="img/logo.png" alt="Logo" >
-				<p></p>
-				<p></p>
-				<p><a href="#">Links to helpful extra resources?</a></p>
-				<p><a href="#">Links to sources for our project?</a></p>
-				<p><a href="#">Links to helpful resources</a></p>
+				<br>
+				<br>
+				<button id="dToggle" type="darkbutton" class="btn btn-info">Lights out</button>
 			</div>
 			<div class="col-sm-8 text-left">
 				<h1>Stock Market Simulator</h1>
@@ -153,21 +154,21 @@
 						<div class="col-sm-4 text-left">
 
 							<div class="form-group row">
-								<label for="stock1" class="col-sm-2 col-form-label">Stock 1 cost:</label>
+								<label for="stock1" class="col-sm-4 col-form-label">Stock 1 cost:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="sOne" name="stockOne" onfocus="this.value=''" value="0"><br>
 								</div>
 							</div>
 
 							<div class="form-group row">
-								<label for="quantity of stock 1" class="col-sm-2 col-form-label">Quantity:</label>
+								<label for="quantity of stock 1" class="col-sm-4 col-form-label">Quantity:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="quantity1" name="quantity1" onfocus="this.value=''" value="1"><br>
 								</div>
 							</div>
 
 							<div class="form-group row">
-								<label for="g1" class="col-sm-2 col-form-label">New value:</label>
+								<label for="g1" class="col-sm-4 col-form-label">New value:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="nOne" name="newStockOne" onfocus="this.value=''" value="0"><br>
 								</div>
@@ -180,21 +181,21 @@
 						<div class="col-sm-4 text-left">
 
 							<div class="form-group row">
-								<label for="stock2" class="col-sm-2 col-form-label">Stock 2 cost:</label>
+								<label for="stock2" class="col-sm-4 col-form-label">Stock 2 cost:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="sTwo" name="stockTwo" onfocus="this.value=''" value="0"><br>
 								</div>
 							</div>
 
 							<div class="form-group row">
-								<label for="quantity of stock 2" class="col-sm-2 col-form-label">Quantity:</label>
+								<label for="quantity of stock 2" class="col-sm-4 col-form-label">Quantity:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="quantity2" name="quantity2" onfocus="this.value=''" value="1"><br>
 								</div>
 							</div>
 
 							<div class="form-group row">
-								<label for="g2" class="col-sm-2 col-form-label">New value:</label>
+								<label for="g2" class="col-sm-4 col-form-label">New value:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="nTwo" name="newStockTwo" onfocus="this.value=''" value="0"><br>
 								</div>
@@ -205,21 +206,21 @@
 						<div class="col-sm-4 text-left">
 
 							<div class="form-group row">
-								<label for="stock3" class="col-sm-2 col-form-label">Stock 3 cost:</label>
+								<label for="stock3" class="col-sm-4 col-form-label">Stock 3 cost:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="sThree" name="stockThree" onfocus="this.value=''" value="0"><br>
 								</div>
 							</div>
 
 							<div class="form-group row">
-								<label for="quantity of stock 3" class="col-sm-2 col-form-label">Quantity:</label>
+								<label for="quantity of stock 3" class="col-sm-4 col-form-label">Quantity:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="quantity3" name="quantity3" onfocus="this.value=''" value="1"><br>
 								</div>
 							</div>
 
 							<div class="form-group row">
-								<label for="g3" class="col-sm-2 col-form-label">New value:</label>
+								<label for="g3" class="col-sm-4 col-form-label">New value:</label>
 								<div class="col-sm-6">
 									<input type="text" class="form-control" id="nThree" name="newStockThree" onfocus="this.value=''" value="0"><br>
 								</div>
@@ -235,7 +236,7 @@
 						</div>
 					</div>
 
-<div class="results">
+			<div class="results">
 					<label for="results">Results</label>
 				</div>
 					<div class="chart-container">
