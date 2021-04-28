@@ -59,7 +59,7 @@ color: #00E0E0;
 .sidenav {
   padding-top: 20px;
   background-color: #f1f1f1;
-  height: 275%;
+  height: 300%;
 }
 
 /* Set black background color, white text and some padding */
@@ -162,27 +162,91 @@ img {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 50%;
+body {
+  margin: 0;
+}
+.content {
+  padding: 10px 20px;
+}
+.content p {
+  font-family: sans-serif;
 }
 
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+/******/
+
+.ticker-container {
+  width: 100%;
+  overflow: hidden;
 }
 
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+.ticker-canvas {
+  width: calc((200px * 15) + 2px);
+  /*
+  200px = minimum width of ticker item before widget script starts removing ticker codes
+  15 = number of ticker codes
+  2px = accounts for 1px external border
+  */
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker-canvas;
+  animation-name: ticker-canvas;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+.ticker-canvas:hover {
+  animation-play-state: paused
 }
 
+@-webkit-keyframes ticker-canvas {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes ticker-canvas {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    visibility: visible;
+  }
+  100% {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.tradingview-widget-container {
+  position: relative;
+}
+.tradingview-widget-container iframe {
+    position: absolute;
+    top: 0;
+}
+.tradingview-widget-container iframe:nth-of-type(2) {
+  left: 100%;
+}
+/*
+.chart-container {
+
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.chart-container:hover {
+  opacity: 1;
+}
+
+
+.chart-container{
+  display: none;
+}
+
+.results:hover + .chart-container{
+  display: block;
+}

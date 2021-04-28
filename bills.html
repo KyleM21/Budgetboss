@@ -44,7 +44,7 @@
   <div class="row content">
 
     <div class="col-sm-2 sidenav">
-	  <img src="img/logo.png" alt="Logo" >
+	  <img src="img/logo.png" alt="Logo">
 	  <p></p>
 	  <p></p>
       <p><a href="#">Links to helpful extra resources?</a></p>
@@ -53,10 +53,10 @@
     </div>
     <div class="col-sm-8 text-left">
 		<h1>Bill Analysis</h1>
-		<p>Find out here if a bill is too much, and get tips on how to lower it.</p>
+		<h3>Find out here if a bill is too much, and get tips on how to lower it.</h3>
 		<hr>
-		<h3>Please enter in your current bills</h3>
-		<p>If you want the option subscription, select subscription in bill type then select the subscription below.<p>
+    <h2> Instructions</h2>
+		<h3>Select a bill type and enter in your current bill for the type, then a graph will show you how you compare to New England's averages.</h3>
 
 
 
@@ -73,44 +73,40 @@
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name" placeholder="Enter your Name"><br><br>
 			-->
+<hr>
+      <div class="form-group row">
+      <label for="sub" class="col-sm-2 col-form-label">Bill Type</label>
+      <div class="col-sm-2">
+      <select name="Bill Type" class ="form-control" id="btype">
+        <option value="electric" id="elec">Electrical</option>
+        <option value="phone" id="phone">Internet</option>
+        <option value="car" id="car">Car Payment</option>
+        <option value="food" id="food">Food</option>
+        <option value="house" id="house">Mortgage</option>
+        <option value="debt" id="debt">Credit Cards</option>
+        <option value="school" id="school">Tuition</option>
+      </select>
+    </div>
+    </div>
 
-			<label for="bills">Bill:</label>
-			<input type="text" id="bills" name="bills" onfocus="this.value=''" value="0"><br><br>
-
-			<label for="sub">Bill type:</label>
-			<select name="Bill Type" id="btype">
-				<option value="electric" id="elec">Electrical</option>
-				<option value="phone" id="phone">Internet</option>
-				<option value="car" id="car">Car Payment</option>
-				<option value="food" id="food">Food</option>
-				<option value="house" id="house">Mortgage</option>
-				<option value="debt" id="debt">Credit Cards</option>
-				<option value="school" id="school">Tuition</option>
-				<option value="subs">Subscriptions</option>
-			</select>
+    <div class="form-group row">
+			<label for="bills" class="col-sm-2 col-form-label">Bill Cost</label>
+      <div class="col-sm-2">
+			<input type="text" class ="form-control" id="bills" name="bills" onfocus="this.value=''" value="0"><br><br>
+    </div>
+  </div>
 
 
-			<br><br>
-			<input type="submit" value="Submit">
-			<br><br>
+  <div class="form-group row">
+    <label for="blank" class="col-sm-2 col-form-label"> </label>
+    <div class="col-sm-4">
+      <button type="submit" class="btn btn-info">Submit</button>
+    </div>
+  </div>
 
-			<h4> Please select which subscription you want below. </h4>
-			<br>
+      <hr>
 
-			<label for="sublist">Subscriptions:</label>
-			<select name="sub" id="sub">
-				<option value="Netflix">Netflix</option>
-				<option value="Hulu">Hulu</option>
-				<option value="Spotify">Apple Music</option>
-				<option value="audi">Spotify</option>
-			</select>
-			<br><br>
-
-			<input type="submit" value="Submit">
-
-			<br>
-			<br>
-			<br>
+      <h3>Results: How your bill compares to New England's Averages</h3>
 
 			<div class="chart-container">
 			  <canvas id="myCanvas"></canvas>

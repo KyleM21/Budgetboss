@@ -8,16 +8,16 @@
 */
 
 
+
 function stonk(){
-		
 	// This first part just sets up the modal window that will show the results!
-	
+
 	// Get the modal
 	var modal = document.getElementById("message");
-	
+
 	// Get the <span> element that closes the modal
 	var span = document.getElementsByClassName("close")[0];
-	
+
 	// When the user clicks on <span> (x), close the modal
 	span.onclick = function() {
 	  modal.style.display = "none";
@@ -26,11 +26,11 @@ function stonk(){
 	// When the user clicks anywhere outside of the modal, close it
 	window.onclick = function(event) {
 	  if (event.target == modal) {
-		modal.style.display = "none";	
+		modal.style.display = "none";
 	  }
-	} 
-	
-	
+	}
+
+
 	// The rest of this function will compute stocks
 
 	var arr = $('form[name="cForm"]').serializeArray();
@@ -55,17 +55,24 @@ function stonk(){
 	document.getElementById("total").value = addCommas(investment);
 	document.getElementById("profit").value = addCommas(profits);
 
+	var parent = document.getElementById('myCanvas').parentNode;
+	document.getElementById('myCanvas').remove();
+	let canvas = document.createElement("canvas");
+	canvas.id = 'myCanvas';
+	parent.appendChild(canvas);
+
+
 	if(profits<0){
 		document.getElementById("mText").innerHTML = ("The total value of your stocks went down, causing you a loss of $" + addCommas(Math.abs(profits)) + ".");
 		modal.style.display = "block";
 
 		var ctx = document.getElementById('myCanvas').getContext('2d');
 		var myChart = new Chart(ctx, {
-			type: 'line',
+			type: 'bar',
 			data: {
 				labels: ['Stock 1 Cost', 'Stock 1 New Value', 'Stock 2 Cost', 'Stock 2 New Value', 'Stock 3 Cost', 'Stock 3 New Value', 'Total Investment', 'Worth', 'Profits'],
 				datasets: [{
-					label: 'Comparing your bill to averages',
+					label: 'Comparing Stocks to New Values',
 					data: [x11, x12, x21, x22, x31, x32, investment, worth, profits],
 					backgroundColor: [
 						'rgba(255, 99, 132, 0.2)',
@@ -99,13 +106,14 @@ function stonk(){
 		document.getElementById("mText").innerHTML = ("Your stocks did not change, therefore you have 0$ in profits.");
 		modal.style.display = "block";
 
+
 		var ctx = document.getElementById('myCanvas').getContext('2d');
 		var myChart = new Chart(ctx, {
-			type: 'line',
+			type: 'bar',
 			data: {
 				labels: ['Stock 1 Cost', 'Stock 1 New Value', 'Stock 2 Cost', 'Stock 2 New Value', 'Stock 3 Cost', 'Stock 3 New Value', 'Total Investment', 'Worth', 'Profits'],
 				datasets: [{
-					label: 'Comparing your bill to averages',
+					label: 'Comparing Stocks to New Values',
 					data: [x11, x12, x21, x22, x31, x32, investment, worth, profits],
 					backgroundColor: [
 						'rgba(255, 99, 132, 0.2)',
@@ -142,11 +150,11 @@ function stonk(){
 
 		var ctx = document.getElementById('myCanvas').getContext('2d');
 		var myChart = new Chart(ctx, {
-			type: 'line',
+			type: 'bar',
 			data: {
 				labels: ['Stock 1 Cost', 'Stock 1 New Value', 'Stock 2 Cost', 'Stock 2 New Value', 'Stock 3 Cost', 'Stock 3 New Value', 'Total Investment', 'Worth', 'Profits'],
 				datasets: [{
-					label: 'Comparing your bill to averages',
+					label: 'Comparing Stocks to New Values',
 					data: [x11, x12, x21, x22, x31, x32, investment, worth, profits],
 					backgroundColor: [
 						'rgba(255, 99, 132, 0.2)',
@@ -176,7 +184,7 @@ function stonk(){
 			}
 		});
 	}
-	
+
 }
 
 
@@ -186,10 +194,10 @@ function addCommas(x){
 
 
 //Validation
-
+/*
 $(document).ready(function() {
 	$("form[name='cForm']").validate({
-		
+
     rules: {
 		stockOne: {
 			pattern: [0-9,],
@@ -242,6 +250,6 @@ $(document).ready(function() {
 			number: "Please only enter numerical values"
 		}
     }
-	
+
   });
-});
+});*/

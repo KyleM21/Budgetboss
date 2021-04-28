@@ -18,197 +18,274 @@
 
 	<!--
 	<script>
-		$("#stonkForm").submit(function(event){
-		   event.preventDefault()
-		})
-	</script>
-	-->
+	$("#stonkForm").submit(function(event){
+	event.preventDefault()
+})
+</script>
+-->
 
-  </head>
-  <body>
+</head>
+<body>
 
-  <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-          <!-- logo -->
-          <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Mynavbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <p class="navbar-brand">Budget Boss</p>
-          </div>
-          <!-- menu -->
-          <div class="collapse navbar-collapse navbar-center" id="Mynavbar">
-              <ul class="nav navbar-nav">
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="calc.html">Budget Calculator</a></li>
-                  <li class="active"><a href="#">Stocks</a></li>
-                  <li><a href="bills.html">Bill Analysis</a></li>
-
-              </ul>
-          </div>
-      </div>
-  </nav>
-<div class="container-fluid text-center">
-  <div class="row content">
-
-    <div class="col-sm-2 sidenav">
-	  <img src="img/logo.png" alt="Logo" >
-	  <p></p>
-	  <p></p>
-      <p><a href="#">Links to helpful extra resources?</a></p>
-      <p><a href="#">Links to sources for our project?</a></p>
-      <p><a href="#">Links to helpful resources</a></p>
-    </div>
-    <div class="col-sm-8 text-left">
-		<h1>Wanna learn some STONKS?</h1>
-		<p>"Stonks only go up" - Bad financial advice</p>
-		<hr>
-		<h3>Simulate stonks here</h3>
-		<p>Please enter the initial price of each stock here</p>
-<hr>
-		<form id="cForm" name="cForm" onsubmit="stonk(); return false;">
-
-			<div class="row">
-				<div class="col-sm-4 text-left">
-
-					<div class="form-group row">
-					<label for="stock1" class="col-sm-2 col-form-label">Stock 1 cost:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="sOne" name="stockOne" onfocus="this.value=''" value="0"><br>
-				</div>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<!-- logo -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Mynavbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<p class="navbar-brand">Budget Boss</p>
 			</div>
+			<!-- menu -->
+			<div class="collapse navbar-collapse navbar-center" id="Mynavbar">
+				<ul class="nav navbar-nav">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="calc.html">Budget Calculator</a></li>
+					<li class="active"><a href="#">Stocks</a></li>
+					<li><a href="bills.html">Bill Analysis</a></li>
 
-			<div class="form-group row">
-					<label for="quantity of stock 1" class="col-sm-2 col-form-label">Quantity:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="quantity1" name="quantity1" onfocus="this.value=''" value="1"><br>
-				</div>
+				</ul>
 			</div>
-
-			<div class="form-group row">
-					<label for="g1" class="col-sm-2 col-form-label">New value:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="nOne" name="newStockOne" onfocus="this.value=''" value="0"><br>
-				</div>
-			</div>
-					<br><br>
-
-				</div>
-
-
-				<div class="col-sm-4 text-left">
-
-					<div class="form-group row">
-					<label for="stock2" class="col-sm-2 col-form-label">Stock 2 cost:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="sTwo" name="stockTwo" onfocus="this.value=''" value="0"><br>
-				</div>
-			</div>
-
-			<div class="form-group row">
-					<label for="quantity of stock 2" class="col-sm-2 col-form-label">Quantity:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="quantity2" name="quantity2" onfocus="this.value=''" value="1"><br>
-				</div>
-			</div>
-
-			<div class="form-group row">
-					<label for="g2" class="col-sm-2 col-form-label">New value:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="nTwo" name="newStockTwo" onfocus="this.value=''" value="0"><br>
-				</div>
-			</div>
-					<br><br>
-				</div>
-
-				<div class="col-sm-4 text-left">
-
-					<div class="form-group row">
-					<label for="stock3" class="col-sm-2 col-form-label">Stock 3 cost:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="sThree" name="stockThree" onfocus="this.value=''" value="0"><br>
-				</div>
-			</div>
-
-			<div class="form-group row">
-					<label for="quantity of stock 3" class="col-sm-2 col-form-label">Quantity:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="quantity3" name="quantity3" onfocus="this.value=''" value="1"><br>
-				</div>
-			</div>
-
-			<div class="form-group row">
-					<label for="g3" class="col-sm-2 col-form-label">New value:</label>
-					<div class="col-sm-6">
-					<input type="text" class="form-control" id="nThree" name="newStockThree" onfocus="this.value=''" value="0"><br>
-				</div>
-			</div>
-					<br><br>
-				</div>
-			</div>
-			<div class="form-group row">
-				<label for="blank" class="col-sm-5 col-form-label"> </label>
-				<div class="col-sm-6">
-					<button type="submit" class="btn btn-info">Submit</button>
-				</div>
-			</div>
-		</form>
-
-		<!-- The Modal -->
-		<div id="message" class="modal">
-
-		  <!-- Modal content -->
-		  <div class="modal-content">
-			<span class="close">&times;</span>
-			<p id="mText"></p>
-		  </div>
-
 		</div>
+	</nav>
+	<div class="container-fluid text-center">
+		<div class="row content">
 
-	<br><br>
-	<label for="results">Results</label>
-	<div class="chart-container">
-		<canvas id="myCanvas"></canvas>
+			<div class="col-sm-2 sidenav">
+				<img src="img/logo.png" alt="Logo" >
+				<p></p>
+				<p></p>
+				<p><a href="#">Links to helpful extra resources?</a></p>
+				<p><a href="#">Links to sources for our project?</a></p>
+				<p><a href="#">Links to helpful resources</a></p>
+			</div>
+			<div class="col-sm-8 text-left">
+				<h1>Stock Market Simulator</h1>
+				<p>"Stonks only go up" - Bad financial advice</p>
+				<hr>
+				<h3>Instructions</h3>
+				<h3>Please enter the initial price of each stock here, how many stocks you would like to buy, then the projected new value.</h3>
+				<h3>Below is a Stock Market Scrolling Ticker with some stocks and how they are doing currently, also gives some examples of potential stocks you could buy.</h3>
+				<h3> Also a graph will show how your stocks cost vs the projected total investment.</h3>
+<br>
+				<div class="ticker-container">
+					<div class="ticker-canvas">
+						<div class="tradingview-widget-container">
+							<div class="tradingview-widget-container__widget"></div>
+							<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js">
+							{
+								"symbols": [
+									{
+										"title": "S&P 500",
+										"proName": "INDEX:SPX"
+									},
+									{
+										"title": "Nasdaq 100",
+										"proName": "INDEX:IUXX"
+									},
+									{
+										"title": "EUR/USD",
+										"proName": "FX_IDC:EURUSD"
+									},
+									{
+										"title": "BTC/USD",
+										"proName": "BITFINEX:BTCUSD"
+									},
+									{
+										"title": "ETH/USD",
+										"proName": "BITFINEX:ETHUSD"
+									},
+									{
+										"description": "Apple",
+										"proName": "NASDAQ:AAPL"
+									},
+									{
+										"description": "Berkshire",
+										"proName": "NYSE:BRK.A"
+									},
+									{
+										"description": "Microsoft",
+										"proName": "NASDAQ:MSFT"
+									},
+									{
+										"description": "Google",
+										"proName": "NASDAQ:GOOG"
+									},
+									{
+										"description": "Tesla",
+										"proName": "NASDAQ:TSLA"
+									},
+									{
+										"description": "Amazon",
+										"proName": "NASDAQ:AMZN"
+									},
+									{
+										"description": "AUD/USD",
+										"proName": "OANDA:AUDUSD"
+									},
+									{
+										"description": "Sony",
+										"proName": "NYSE:SNE"
+									},
+									{
+										"description": "BHP",
+										"proName": "BHP"
+									},
+									{
+										"description": "Telstra",
+										"proName": "TLS"
+									}
+								],
+								"locale": "en"
+							}
+							</script>
+						</div>
+					</div>
+				</div>
+
+				<hr>
+				<form id="cForm" name="cForm" onsubmit="stonk(); return false;">
+
+					<div class="row">
+						<div class="col-sm-4 text-left">
+
+							<div class="form-group row">
+								<label for="stock1" class="col-sm-2 col-form-label">Stock 1 cost:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="sOne" name="stockOne" onfocus="this.value=''" value="0"><br>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="quantity of stock 1" class="col-sm-2 col-form-label">Quantity:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="quantity1" name="quantity1" onfocus="this.value=''" value="1"><br>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="g1" class="col-sm-2 col-form-label">New value:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="nOne" name="newStockOne" onfocus="this.value=''" value="0"><br>
+								</div>
+							</div>
+							<br><br>
+
+						</div>
+
+
+						<div class="col-sm-4 text-left">
+
+							<div class="form-group row">
+								<label for="stock2" class="col-sm-2 col-form-label">Stock 2 cost:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="sTwo" name="stockTwo" onfocus="this.value=''" value="0"><br>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="quantity of stock 2" class="col-sm-2 col-form-label">Quantity:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="quantity2" name="quantity2" onfocus="this.value=''" value="1"><br>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="g2" class="col-sm-2 col-form-label">New value:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="nTwo" name="newStockTwo" onfocus="this.value=''" value="0"><br>
+								</div>
+							</div>
+							<br><br>
+						</div>
+
+						<div class="col-sm-4 text-left">
+
+							<div class="form-group row">
+								<label for="stock3" class="col-sm-2 col-form-label">Stock 3 cost:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="sThree" name="stockThree" onfocus="this.value=''" value="0"><br>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="quantity of stock 3" class="col-sm-2 col-form-label">Quantity:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="quantity3" name="quantity3" onfocus="this.value=''" value="1"><br>
+								</div>
+							</div>
+
+							<div class="form-group row">
+								<label for="g3" class="col-sm-2 col-form-label">New value:</label>
+								<div class="col-sm-6">
+									<input type="text" class="form-control" id="nThree" name="newStockThree" onfocus="this.value=''" value="0"><br>
+								</div>
+							</div>
+							<br><br>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="blank" class="col-sm-5 col-form-label"> </label>
+						<div class="col-sm-6">
+							<button type="submit" class="btn btn-info">Submit</button>
+						</div>
+					</div>
+
+<div class="results">
+					<label for="results">Results</label>
+				</div>
+					<div class="chart-container">
+						<canvas id="myCanvas"></canvas>
+					</div>
+				</form>
+
+				<!-- The Modal -->
+				<div id="message" class="modal">
+
+					<!-- Modal content -->
+					<div class="modal-content">
+						<span class="close">&times;</span>
+						<p id="mText"></p>
+					</div>
+				</div>
+
+				<br><br><br><br><br>
+
+			<div class="form-group row">
+				<label for="Total" class="col-sm-2 col-form-label">Total Invesment:</label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="total" name="Investment" value="" disabled="disabled"><br><br>
+				</div>
+			</div>
+
+			<br>
+			<div class="form-group row">
+				<label for="Total" class="col-sm-2 col-form-label">Profits: </label>
+				<div class="col-sm-2">
+					<input type="text" class="form-control" id="profit" name="Investment" value="" disabled="disabled"><br><br>
+				</div>
+			</div>
+			<label for="Total">Note: The number displayed in profits takes out the cost of the initial investment</label>
+
+			<br><br>
 		</div>
-	<br>
-
-	<br>
-
-	<!--
-	<label for="stock1r">Stock 1:</label>
-	<input type="text" id="r1" name="results1" value="0" disabled="disabled"><br><br>
-	<label for="stock2r">Stock 2:</label>
-	<input type="text" id="r2" name="results2" value="0" disabled="disabled"><br><br>
-	<label for="stock3r">Stock 3:</label>
-	<input type="text" id="r3" name="results3" value="0" disabled="disabled"><br><br>
-	-->
-
-	<br>
-	<label for="Total">Total Invesment:</label>
-	<input type="text" id="total" name="Investment" value="" disabled="disabled"><br><br>
-	<br>
-	<label for="Total">Profits: </label>
-	<input type="text" id="profit" name="Investment" value="" disabled="disabled"><br><br>
-	<label for="Total">Note: The number displayed in profits takes out the cost of the initial investment</label>
-
-	<br><br>
-    </div>
-    <div class="col-sm-2 sidenav">
-      <div class="well">
-        <p>Ads by Google</p>
-      </div>
-      <div class="well">
-        <p>Ads by Google</p>
-      </div>
-    </div>
-  </div>
+		<div class="col-sm-2 sidenav">
+			<div class="well">
+				<p>Ads by Google</p>
+			</div>
+			<div class="well">
+				<p>Ads by Google</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 <footer class="container-fluid text-center">
-  <p>Powered by Team Scuffed</p>
+	<p>Powered by Team Scuffed</p>
 </footer>
 
 </body>
