@@ -15,17 +15,9 @@
 
 	<!-- This is the script for stock computations -->
 	<script type = "text/javascript" src="js/stonks.js"></script>
-	
+
 	<!-- Dark Mode Script -->
 	<script type = "text/javascript" src="js/dark.js"></script>
-
-	<!--
-	<script>
-		$("#stonkForm").submit(function(event){
-		event.preventDefault()
-		})
-	</script>
-	-->
 
 </head>
 <body>
@@ -276,11 +268,31 @@
 		</div>
 		<div class="col-sm-2 sidenav">
 			<div class="well">
-				<p>Ads by Google</p>
+				<img src="img/ads/ad2.jpg" id ="random_image" alt="ad1" width="500" height="500">
+
+				<script type="text/javascript">
+				var images = new Array('img/ads/ad1.jpg', 'img/ads/ad2.jpg', 'img/ads/ad3.jpg', 'img/ads/ad4.jpg', 'img/ads/ad5.jpg', 'img/ads/ad6.jpg',
+				'img/ads/ad7.jpg', 'img/ads/ad8.jpg', 'img/ads/ad9.jpg', 'img/ads/ad10.jpg', 'img/ads/ad11.jpg', 'img/ads/ad12.jpg', 'img/ads/ad13.jpg',
+				'img/ads/ad14.jpg', 'img/ads/ad15.jpg',);
+				var l = images.length;
+				var random_no = Math.floor(l*Math.random());
+				document.getElementById("random_image").src = images[random_no];
+			</script>
 			</div>
+
 			<div class="well">
-				<p>Ads by Google</p>
+				<img src="img/ads/ad2.jpg" id ="random_image1" alt="ad1" width="500" height="500">
+
+				<script type="text/javascript">
+				var images = new Array('img/ads/ad1.jpg', 'img/ads/ad2.jpg', 'img/ads/ad3.jpg', 'img/ads/ad4.jpg', 'img/ads/ad5.jpg', 'img/ads/ad6.jpg',
+				'img/ads/ad7.jpg', 'img/ads/ad8.jpg', 'img/ads/ad9.jpg', 'img/ads/ad10.jpg', 'img/ads/ad11.jpg', 'img/ads/ad12.jpg', 'img/ads/ad13.jpg',
+				'img/ads/ad14.jpg', 'img/ads/ad15.jpg',);
+				var l = images.length;
+				var random_no = Math.floor(l*Math.random());
+				document.getElementById("random_image1").src = images[random_no];
+			</script>
 			</div>
+
 		</div>
 	</div>
 </div>

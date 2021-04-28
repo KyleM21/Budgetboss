@@ -2,6 +2,28 @@
 Bills.js page
 */
 
+$(document).ready(function () {//start of function
+  $("form").submit(function(v) {
+    v.preventDefault();//validation first
+    bill();//call table and input function
+  }).validate({
+    rules: {
+      "bills": {
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [0, 100000]//range can only be from 0 to 100000
+      }
+    },
+    messages: {
+      income: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+      }
+    },
+  });
+});
+
 //function for bill.cs
 function bill() {
 

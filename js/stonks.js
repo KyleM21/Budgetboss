@@ -7,7 +7,107 @@
 
 */
 
-
+$(document).ready(function () {//start of function
+  $("form").submit(function(v) {
+    v.preventDefault();//validation first
+    stonk();//call table and input function
+  }).validate({
+    rules: {
+      "stockOne": {
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [0, 100000]//range can only be from 0 to 100000
+      },
+      "quantity1": {
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [1, 100000]//range can only be from 0 to 100000
+      },
+      "newStockOne": {
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [0, 100000]//range can only be from 0 to 100000
+      },
+      "stockTwo": {
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [0, 100000]//range can only be from 0 to 100000
+      },
+      "quantity2":{
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [1, 100000]//range can only be from 0 to 100000
+      },
+      "newStockTwo":{
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [0, 100000]//range can only be from 0 to 100000
+      },
+      "stockThree":{
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [0, 100000]//range can only be from 0 to 100000
+      },
+			"quantity3":{
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [1, 100000]//range can only be from 0 to 100000
+      },
+			"newStockThree":{
+        required: true,//it must be a number
+        number: true,//it must be a number
+        range: [0, 100000]//range can only be from 0 to 100000
+      }
+    },
+    messages: {
+      stockOne: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+      },
+      quantity1: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 1 to 100000."//error message for range
+      },
+      newStockOne: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+      },
+      stockTwo: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+      },
+      quantity2: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 1 to 100000."/error message for range
+      },
+      newStockTwo: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+      },
+      stockThree: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+      },
+			quantity3: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 1 to 100000."//error message for range
+      },
+			newStockThree: {
+        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
+        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
+        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+      }
+    },
+  });
+});
 
 function stonk(){
 	// This first part just sets up the modal window that will show the results!
