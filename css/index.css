@@ -82,11 +82,93 @@ img {
 }
 
 
-/* On small screens, set height to 'auto' for sidenav and grid*
+ On small screens, set height to 'auto' for sidenav and grid*
 @media screen and (max-width: 767px) {
   .sidenav {
     height: auto;
     padding: 15px;
   }
   .row.content {height:auto;}
+}
+
+.container {
+  position: absolute;
+  left: 100px;
+  width: 50%;
+}
+
+.image {
+  display: block;
+height: 450px;
+width: 450px;
+}
+
+.overlay {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 450px;
+  width: 450px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container1 {
+  position: absolute;
+  right: -100px;
+  width: 50%;
+}
+
+.image1 {
+  display: block;
+height: 450px;
+width: 450px;
+}
+
+.overlay1 {
+  position: absolute;
+  left: 0px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  height: 450px;
+  width: 450px;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container1:hover .overlay1 {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
