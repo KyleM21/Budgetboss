@@ -83,7 +83,7 @@ $(document).ready(function () {//start of function
       quantity2: {
         required: "Error. Please enter in a value. Must be an integer.",//error message for required input
         number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 1 to 100000."/error message for range
+        range: "Error. Please enter an integer between 1 to 100000."//error message for range
       },
       newStockTwo: {
         required: "Error. Please enter in a value. Must be an integer.",//error message for required input
