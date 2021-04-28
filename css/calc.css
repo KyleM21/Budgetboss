@@ -180,6 +180,7 @@ body { font-family: helvetica, arial, sans-serif; }
   background-color: #008080;
   font-size: 20px;
   border-radius: 5px;
+  width: 412px;
   /*this is to remove space between divs that are inline-block*/
 }
 
