@@ -19,49 +19,49 @@ $(document).ready(function () {//start of function
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "quantity1": {
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "newStockOne": {
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "stockTwo": {
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "quantity2":{
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "newStockTwo":{
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "stockThree":{
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/,	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
 			"quantity3":{
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
 			"newStockThree":{
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
 		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
@@ -110,13 +110,13 @@ $(document).ready(function () {//start of function
         minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
         maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
-			quantity3: {
+		quantity3: {
         required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
 		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
         minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
         maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
-			newStockThree: {
+		newStockThree: {
         required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
 		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
         minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range

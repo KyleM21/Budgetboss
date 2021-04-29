@@ -13,46 +13,46 @@ $(document).ready(function () {//start of function
   }).validate({
     rules: {
       "income": {
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
-		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "rent": {
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
-		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "utilities": {
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
-		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "insurance": {
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
-		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "food":{
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
-		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "savings":{
-        required: true,			//it must be a number
+        required: true,			// it must be a number
 		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
-		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "misc":{
-        required: true,			//it must be a number
-		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+        required: true,			// it must be a number
+		pattern: /^[0-9,.]+$/,	// it must be numbers and commas
 		minlength: 1,			// minimum length of 1
-		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       }
     },
     messages: {
