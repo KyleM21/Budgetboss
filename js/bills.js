@@ -72,16 +72,6 @@ function bill() {
 	let canvas = document.createElement("canvas");
 	canvas.id = 'myCanvas';
 	parent.appendChild(canvas);
-
-
-	//variable for MA state average of bills
-	var avg_elec = 177.00;
-	var avg_phone = 63.91;
-	var avg_car = 563.00;
-	var avg_food = 349.00;
-	var avg_rent = 1696.00;
-	var avg_debt = 666.20;
-	var avg_school = 229.02;
 	
 /*	
 	var avg_netflix = 13.99;
@@ -89,13 +79,11 @@ function bill() {
 	var avg_apple = 9.99;
 	var avg_spotify = 9.99;
 */
-
-
-
 	switch(result){
 		case "electric":
 		
-			//avg electric variables for NH, ME, CT, RI, VT
+			//avg electric variables for MA, MA, NH, ME, CT, RI, VT
+			var avg_elec = 177.00;
 			var avg_elec_NH = 169.35;
 			var avg_elec_ME = 152.00;
 			var avg_elec_CT = 189.00;
@@ -229,7 +217,8 @@ function bill() {
 
 		case "phone":
 		
-			//avg internet variables for NH, ME, CT, RI, VT
+			//avg internet variables for MA, NH, ME, CT, RI, VT
+			var avg_phone = 63.91;
 			var avg_phone_NH = 85.38;
 			var avg_phone_ME = 65.56;//avg wifi of bangor and portland
 			var avg_phone_CT = 60.00;
@@ -361,7 +350,8 @@ function bill() {
 
 		case "car":
 		
-			//avg car variables for NH, ME, CT, RI, VT
+			//avg car variables for MA, NH, ME, CT, RI, VT
+			var avg_car = 563.00;
 			var avg_car_NH = 487.00;
 			var avg_car_ME = 519.00;
 			var avg_car_CT = 527.00;
@@ -493,7 +483,8 @@ function bill() {
 
 		case "food":
 		
-			//avg food variables for NH, ME, CT, RI, VT
+			//avg food variables for MA, NH, ME, CT, RI, VT
+			var avg_food = 349.00;
 			var avg_food_NH = 287.66;
 			var avg_food_ME = 342.92;
 			var avg_food_CT = 289.75;
@@ -625,8 +616,9 @@ function bill() {
 
 		case "house":
 		
-			//avg rent/mortgage variables for NH, ME, CT, RI, VT
+			//avg rent/mortgage variables for MA, NH, ME, CT, RI, VT
 			//https://www.businessinsider.com/personal-finance/average-mortgage-payment
+			var avg_rent = 1696.00;
 			var avg_rent_NH = 1917.00;
 			var avg_rent_ME = 1381.00;
 			var avg_rent_CT = 2096.00;
@@ -758,8 +750,9 @@ function bill() {
 
 		case "debt":
 		
-			//avg credit card variables for NH, ME, CT, RI, VT
+			//avg credit card variables for MA, NH, ME, CT, RI, VT
 			//https://www.chamberofcommerce.org/credit-card-debt-by-state
+			var avg_debt = 666.20;
 			var avg_debt_NH = 687.70;
 			var avg_debt_ME = 622.00;
 			var avg_debt_CT = 750.00;
@@ -891,8 +884,9 @@ function bill() {
 			break;
 		case "school":
 		
-			//avg student loan debt variables for NH, ME, CT, RI, VT
+			//avg student loan debt variables for MA, NH, ME, CT, RI, VT
 			//https://www.studentloanplanner.com/average-student-loan-payment-by-state/
+			var avg_school = 229.02;
 			var avg_school_NH = 438.00;
 			var avg_school_ME = 373.00;
 			var avg_school_CT = 428.00;
