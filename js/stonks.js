@@ -13,96 +13,114 @@ $(document).ready(function () {//start of function
   }).validate({
     rules: {
       "stockOne": {
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [0, 100000]//range can only be from 0 to 100000
+        required: true,			// it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "quantity1": {
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [1, 100000]//range can only be from 0 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "newStockOne": {
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [0, 100000]//range can only be from 0 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "stockTwo": {
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [0, 100000]//range can only be from 0 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "quantity2":{
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [1, 100000]//range can only be from 0 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "newStockTwo":{
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [0, 100000]//range can only be from 0 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
       "stockThree":{
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [0, 100000]//range can only be from 0 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/,	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
 			"quantity3":{
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [1, 100000]//range can only be from 0 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       },
 			"newStockThree":{
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [0, 100000]//range can only be from 0 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.000
       }
     },
     messages: {
       stockOne: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       quantity1: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 1 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       newStockOne: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       stockTwo: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       quantity2: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 1 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       newStockTwo: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       stockThree: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
 			quantity3: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 1 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
 			newStockThree: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between 0 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       }
     },
   });

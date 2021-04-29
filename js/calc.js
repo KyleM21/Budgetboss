@@ -13,76 +13,90 @@ $(document).ready(function () {//start of function
   }).validate({
     rules: {
       "income": {
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [-100000, 100000]//range can only be from -100000 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
       },
       "rent": {
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [-100000, 100000]//range can only be from -100000 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
       },
       "utilities": {
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [-100000, 100000]//range can only be from -100000 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
       },
       "insurance": {
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [-100000, 100000]//range can only be from -100000 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
       },
       "food":{
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [-100000, 100000]//range can only be from -100000 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
       },
       "savings":{
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [-100000, 100000]//range can only be from -100000 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
       },
       "misc":{
-        required: true,//it must be a number
-        number: true,//it must be a number
-        range: [-100000, 100000]//range can only be from -100000 to 100000
+        required: true,			//it must be a number
+		pattern: /^[0-9,.]+$/, 	// it must be numbers and commas
+		minlength: 1,			// minimum length of 1
+		maxlength: 10			// max length of 10, to support stock values up to 10,000,000, or 100,000.0005
       }
     },
     messages: {
       income: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between -100000 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       rent: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between -100000 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       utilities: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number. If you are using a comma, please remove it.",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between -100000 to 100000."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       insurance: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between -50 to 50."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       food: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between -50 to 50."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       savings: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between -50 to 50."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       },
       misc: {
-        required: "Error. Please enter in a value. Must be an integer.",//error message for required input
-        number: "Error. Please enter in a number",//error message for number, dont even need it but failsafe
-        range: "Error. Please enter an integer between -50 to 50."//error message for range
+        required: "Error. Please enter in a value. Must be an integer.",			//error message for required input
+		pattern: "Error. Please enter only numbers and commas.", 					//error message for invalid pattern
+        minlength: "Error. Please enter an integer between 1 and 10 characters.",	//error message for range
+        maxlength: "Error. Please enter an integer between 1 and 10 characters."	//error message for range
       }
     },
   });
