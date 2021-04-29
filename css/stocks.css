@@ -1,3 +1,11 @@
+/*	
+	DOCTYPE css
+	File:  stocks.css
+	Name: Kyle Marcoux and Kerry O'Neill
+    GUI II
+    CSS based on template by W3Schools: https://www.w3schools.com/bootstrap/bootstrap_templates.asp
+*/
+
 .navbar-default {
   background: rgb(0,14,36);
   background: linear-gradient(90deg, rgba(0,14,36,1) 0%, rgba(4,66,64,1) 0%, rgba(176,244,255,1) 100%);

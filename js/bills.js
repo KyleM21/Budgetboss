@@ -1,6 +1,11 @@
 /*
-Bills.js page
+	DOCTYPE JAVASCRIPT
+	File:  bills.js
+	Name: Kyle Marcoux and Kerry O'Neill
+    GUI II
+    This is the javascript for Budget Boss Bill Analysis calculations
 */
+
 
 $(document).ready(function () {//start of function
   $("form").submit(function(v) {

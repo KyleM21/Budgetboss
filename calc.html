@@ -1,6 +1,21 @@
 <!DOCTYPE html>
+<!--File:  calc.html
+	Name: Kyle Marcoux and Kerry O'Neill
+    GUI II
+    This is BudgetBoss, a tool to help people learn basic financing skills!
+-->
+
+<!-- The language of this page is English -->
 <html lang="en">
 <head>
+	<!--<meta name="title" content="BudgetBoss">
+		<meta name="description" content="This is our GUI II project, BudgetBoss">
+		<meta name="keywords" content="homework, UML, BudgetBoss, JQueryUI, Budgeting">
+		<meta name="robots" content="noindex, nofollow">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="language" content="English">
+		<meta name="author" content="Kyle Marcoux and Kerry O'Neill">-->
+		
 	<title>Budget Boss</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -73,70 +88,73 @@
 
 				<form name="cForm" onsubmit="budget(); return false;">
 
-					<div class="col-sm-7">
+					<div class="col-sm-4">
 						<div class="form-group row">
-							<label for="income" class="col-sm-2 col-form-label">Income</label>
-							<div class="col-sm-4">
+							<label for="income" class="col-sm-3 col-form-label">Income</label>
+							<div class="col-sm-8">
 								<input type="text" class="form-control" id="inc" name="income" onfocus="this.value=''" value="0"><br><br>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="rent" class="col-sm-2 col-form-label">Rent</label>
-							<div class="col-sm-4">
+							<label for="rent" class="col-sm-3 col-form-label">Rent</label>
+							<div class="col-sm-8">
 								<input type="text" class="form-control" id="rent" name="rent" onfocus="this.value=''" value="0"><br><br>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="utilities" class="col-sm-2 col-form-label">Utlities</label>
-							<div class="col-sm-4">
+							<label for="utilities" class="col-sm-3 col-form-label">Utlities</label>
+							<div class="col-sm-8">
 								<input type="text" class="form-control" id="util" name="utilities" onfocus="this.value=''" value="0"><br><br>
 
 							</div>
 						</div>
 						<div class="form-group row">
-							<label for="insurance" class="col-sm-2 col-form-label">Insurance</label>
-							<div class="col-sm-4">
+							<label for="insurance" class="col-sm-3 col-form-label">Insurance</label>
+							<div class="col-sm-8">
 								<input type="text" class="form-control" id="insurance" name="insurance" onfocus="this.value=''" value="0"><br><br>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="food" class="col-sm-2 col-form-label">Food</label>
-							<div class="col-sm-4">
+							<label for="food" class="col-sm-3 col-form-label">Food</label>
+							<div class="col-sm-8">
 								<input type="text" class="form-control" id="food" name="food" onfocus="this.value=''" value="0"><br><br>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="savings" class="col-sm-2 col-form-label">Savings</label>
-							<div class="col-sm-4">
+							<label for="savings" class="col-sm-3 col-form-label">Savings</label>
+							<div class="col-sm-8">
 								<input type="text" class="form-control" id="savings" name="savings" onfocus="this.value=''" value="0"><br><br>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="misc" class="col-sm-2 col-form-label">Miscellaneous</label>
-							<div class="col-sm-4">
+							<label for="misc" class="col-sm-3 col-form-label">Miscellaneous</label>
+							<div class="col-sm-8">
 								<input type="text" class="form-control" id="misc" name="misc" onfocus="this.value=''" value="0"><br><br>
 							</div>
 						</div>
 
 						<div class="form-group row">
-							<label for="blank" class="col-sm-2 col-form-label"> </label>
-							<div class="col-sm-4">
+							<label for="blank" class="col-sm-3 col-form-label"> </label>
+							<div class="col-sm-8">
 								<button type="submit" class="btn btn-info">Submit</button>
 							</div>
 						</div>
 
 						<hr>
 						<div class="form-group row">
-							<label for="Total" class="col-sm-2 col-form-label">Total Expenses</label>
-							<div class="col-sm-4">
+							<label for="Total" class="col-sm-3 col-form-label">Total Expenses</label>
+							<div class="col-sm-8">
 								<input type="text" class="form-control" id="total" name="Expenses" value="" disabled="disabled"><br><br>
 							</div>
 						</div>
+					</div>
+					
+					<div class="col-sm-1">
 					</div>
 
 					<!-- https://www.jqueryscript.net/demo/Creating-A-Simple-Calculator-with-jQuery/ -->
@@ -172,7 +190,7 @@
 						</div>
 					</div>
 
-					<div class="col-sm-1">
+					<div class="col-sm-2">
 					</div>
 				</form>
 

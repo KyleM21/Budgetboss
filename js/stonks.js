@@ -1,10 +1,9 @@
 /*
 	DOCTYPE JAVASCRIPT
 	File:  stonks.js
-    This is the javascript for Budget Boss
-
-	Revisions:
-
+	Name: Kyle Marcoux and Kerry O'Neill
+    GUI II
+    This is the javascript for Budget Boss Stock calculations
 */
 
 $(document).ready(function () {//start of function

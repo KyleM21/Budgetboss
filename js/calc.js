@@ -1,11 +1,11 @@
 /*
 	DOCTYPE JAVASCRIPT
 	File:  calc.js
-    This is the javascript for Budget Boss
-
-	Revisions:
-
+	Name: Kyle Marcoux and Kerry O'Neill
+    GUI II
+    This is the javascript for Budget Boss Budget Calculator
 */
+
 $(document).ready(function () {//start of function
   $("form").submit(function(v) {
     v.preventDefault();//validation first
