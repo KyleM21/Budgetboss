@@ -15,7 +15,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta name="language" content="English">
 		<meta name="author" content="Kyle Marcoux and Kerry O'Neill">-->
-		
+
 	<title>Budget Boss</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,6 +28,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/additional-methods.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 	<script src="js/jquery.calc.js"></script>
 
 	<!-- This is the script for budget computations -->
@@ -153,8 +154,16 @@
 								<input type="text" class="form-control" id="total" name="Expenses" value="" disabled="disabled"><br><br>
 							</div>
 						</div>
+
+						<div class="results">
+								<label for="results">Pie Chart</label>
+							</div>
+								<div class="chart-container">
+									<canvas id="myCanvas"></canvas>
+								</div>
 					</div>
-					
+
+
 					<div class="col-sm-1">
 					</div>
 

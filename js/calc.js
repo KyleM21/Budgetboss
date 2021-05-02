@@ -148,6 +148,13 @@ function budget() {
 				+ parseFloat(arr[5].value)
 				+ parseFloat(arr[6].value);
 
+        var parent = document.getElementById('myCanvas').parentNode;
+        document.getElementById('myCanvas').remove();
+        let canvas = document.createElement("canvas");
+        canvas.id = 'myCanvas';
+        parent.appendChild(canvas);
+
+
 	// Sets the total expenses to the total field
 	// It also uses a regex on the total expenses to add commas
 	document.getElementById("total").value = tot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -158,16 +165,124 @@ function budget() {
 	if(income > tot){
 		document.getElementById("mText").innerHTML = "Your income is greater then your total bills.";
 		modal.style.display = "block";
+
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Rent', 'Insurance', 'Food', 'Savings', 'Misc', 'Income'],
+        datasets: [{
+          label: 'Comparing your bill to averages',
+          data: [rent, utilities, insurance, food, savings, misc, income],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
 	}
 	else if(income == tot){
 		document.getElementById("mText").innerHTML = ("Your bills equal to your current income, I advise you to use the Bill Analysis Tool"
 				+ " to see if any of your bills could be lowered.");
 		modal.style.display = "block";
+
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Rent', 'Insurance', 'Food', 'Savings', 'Misc', 'Income'],
+        datasets: [{
+          label: 'Comparing your bill to averages',
+          data: [rent, utilities, insurance, food, savings, misc, income],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
 	}
 	else{
 		document.getElementById("mText").innerHTML = ("Your bills are greater then your current income, I STRONGLY advise you to use the Bill Analysis Tool"
 					+ " to see if any of your bills could be lowered.");
 		modal.style.display = "block";
+
+    var ctx = document.getElementById('myCanvas').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Rent', 'Insurance', 'Food', 'Savings', 'Misc', 'Income'],
+        datasets: [{
+          label: 'Comparing your bill to averages',
+          data: [rent, utilities, insurance, food, savings, misc, income],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.2)',
+            'rgba(54, 162, 235, 0.2)',
+            'rgba(255, 206, 86, 0.2)',
+            'rgba(75, 192, 192, 0.2)',
+            'rgba(153, 102, 255, 0.2)',
+            'rgba(255, 159, 64, 0.2)'
+          ],
+          borderColor: [
+            'rgba(255, 99, 132, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)'
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
 	}
 
 }
