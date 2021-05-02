@@ -54,6 +54,9 @@ function bill() {
 		}
 	}
 
+	// Makes chart title appear!
+	document.getElementById("cTitle").style.color = "black"; 
+
 	//Bill function
 	var arr = $('form[name="cForm"]').serializeArray();
 

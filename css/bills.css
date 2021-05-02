@@ -44,8 +44,8 @@
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
 
-background: rgba(0,0,0,0.1);
-color: #00E0E0;
+	background: rgba(0,0,0,0.1);
+	color: #00E0E0;
 }
 
 /*color for home page*/
@@ -102,6 +102,7 @@ img {
 
 .title{
 	text-align: center;
+	color: white;
 }
 
 /* On small screens, set height to 'auto' for sidenav and grid*
