@@ -148,11 +148,11 @@ function budget() {
 				+ parseFloat(arr[5].value)
 				+ parseFloat(arr[6].value);
 
-        var parent = document.getElementById('myCanvas').parentNode;
-        document.getElementById('myCanvas').remove();
-        let canvas = document.createElement("canvas");
-        canvas.id = 'myCanvas';
-        parent.appendChild(canvas);
+	var parent = document.getElementById('myCanvas').parentNode;
+	document.getElementById('myCanvas').remove();
+	let canvas = document.createElement("canvas");
+	canvas.id = 'myCanvas';
+	parent.appendChild(canvas);
 
 
 	// Sets the total expenses to the total field
@@ -170,10 +170,10 @@ function budget() {
     var myChart = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: ['Rent', 'Insurance', 'Food', 'Savings', 'Misc', 'Income'],
+        labels: ['Rent', 'Utilities', 'Insurance', 'Food', 'Savings', 'Misc'],
         datasets: [{
           label: 'Comparing your bill to averages',
-          data: [rent, utilities, insurance, food, savings, misc, income],
+          data: [rent, utilities, insurance, food, savings, misc],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -211,10 +211,10 @@ function budget() {
     var myChart = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: ['Rent', 'Insurance', 'Food', 'Savings', 'Misc', 'Income'],
+        labels: ['Rent', 'Utilities', 'Insurance', 'Food', 'Savings', 'Misc'],
         datasets: [{
           label: 'Comparing your bill to averages',
-          data: [rent, utilities, insurance, food, savings, misc, income],
+          data: [rent, utilities, insurance, food, savings, misc],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -252,10 +252,10 @@ function budget() {
     var myChart = new Chart(ctx, {
       type: 'pie',
       data: {
-        labels: ['Rent', 'Insurance', 'Food', 'Savings', 'Misc', 'Income'],
+        labels: ['Rent', 'Utilities', 'Insurance', 'Food', 'Savings', 'Misc'],
         datasets: [{
           label: 'Comparing your bill to averages',
-          data: [rent, utilities, insurance, food, savings, misc, income],
+          data: [rent, utilities, insurance, food, savings, misc],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',

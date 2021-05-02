@@ -61,13 +61,16 @@ color: #00E0E0;
 }
 
 /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-.row.content {height: 450px}
+.row.content {
+	height: 1500px;
+	padding: 0px;
+	}
 
 /* Set gray background color and 100% height */
 .sidenav {
   padding-top: 20px;
   background-color: #f1f1f1;
-  height: 300%;
+  height: 100%;
 }
 
 /* Set black background color, white text and some padding */
@@ -80,6 +83,8 @@ footer {
 img {
   width: 100%;
   height: auto;
+  max-height: 450px;
+  max-width: 450px;
 }
 
 .chart-container {
